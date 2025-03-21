@@ -1,47 +1,59 @@
-
+#' reading a single measurement from 81x file
+#' @description reads a single measurement from a licor .81x file
+#' @param start line number at which the measurement starts
+#' @param end line number at which the measurement ends
+#' @param all_obs list of all the lines from the full file
+#' @param file filepath to the 81x files
+#' @importFrom readr read_tsv
+#' @importFrom yaml read_yaml
+#' @importFrom tibble enframe
+#' @importFrom tidyr pivot_wider unnest nest
+#' @importFrom dplyr bind_cols
+#' @return a df with 1 row with the meta data of the measurement
+#' and raw data nested
 
 oneobs_81x <- function(
-    # file,
-    # all_obs,
-    start,
-    end
+  start,
+  end,
+  all_obs,
+  file
 ) {
-one_obs <- all_obs[start:end]
+  one_obs <- all_obs[start:end]
 
-# location of meta and data and col names
+  # location of meta and data and col names
 
-first_el <- substr(one_obs, start = 1, stop = 1)
+  first_el <- substr(one_obs, start = 1, stop = 1)
 
-meta_loc <- as.numeric(first_el) |>
-is.na() |>
-which()
 
-data_loc <- which(!is.na(as.numeric(first_el))) # location of data row are where as.numeric did not produce NA
-col_names_loc <- min(data_loc) - 1 # row with col names  is just before the first numeric row
-data_loc <- append(data_loc, col_names_loc, 0)
+  # location of data row are where as.numeric did not produce NA
+  data_loc <- which(!is.na(as.numeric(first_el)))
 
-# read data
-line_skip <- min(data_loc) - 2 + start # we want to skip everything before the colnames
-line_max <- max(data_loc) - line_skip - 1 # skipping everything after the last row of data
+  # row with col names  is just before the first numeric row
+  col_names_loc <- min(data_loc) - 1
+  data_loc <- append(data_loc, col_names_loc, 0)
 
-# read tsv is longer, but much safer than re using the one_obs list (in case there are empty cells)
-obs_data <- read_tsv(file, skip = line_skip, n_max = line_max)
+  # read data
+  # we want to skip everything before the colnames
+  line_skip <- min(data_loc) - 2 + start
+  # skipping everything after the last row of data
+  line_max <- max(data_loc) - line_skip - 1
 
-# read meta data
+  # read tsv is slower, but much safer than re using the one_obs list
+  # (in case there are empty cells)
+  obs_data <- read_tsv(file, skip = line_skip, n_max = line_max)
 
-metadata <- read_yaml(text = one_obs[-data_loc])
+  # read meta data
 
-table_meta <- enframe(metadata) |> # make a df out of the list
-pivot_wider(names_from = name, values_from = value) |> # each element of the list is now a column
-unnest(names(metadata))
+  metadata <- read_yaml(text = one_obs[-data_loc])
 
-# one_obs_tbl <- tibble(
-#     data = obs_data,
-#     table_meta
-# )
+  table_meta <- enframe(metadata) |> # make a df out of the list
+  # each element of the list is now a column
+  pivot_wider(names_from = .data$name, values_from = .data$value) |>
+  unnest(names(metadata))
 
-one_obs_tbl <- bind_cols(table_meta, obs_data) |>
-nest(data = names(obs_data))
 
-one_obs_tbl
+  one_obs_tbl <- bind_cols(table_meta, obs_data) |>
+  nest(data = names(obs_data))
+
+  one_obs_tbl
 }

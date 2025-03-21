@@ -1,55 +1,30 @@
-library(tidyverse)
-library(yaml)
+#' reads 81x licor files
+#' @description reads a .81x file with several measurements
+#' @param file filepath the the 81x file to read
+#' @return a nested tibble with the meta data from each measurements as row and
+#' the raw data nested
+#' @importFrom readr read_lines_raw read_lines
+#' @importFrom purrr map2
+#' @importFrom dplyr bind_rows
+#' @export
 
-# use readlines to create a list
-file <- "raw_files/10-28-2011.81x"
-# single_file <- "raw_files/test.81x"
-# full_file <- readLines(file)
-raw_lines <- read_lines_raw(file)
-# use the empty line as a slicer
-length <- lengths(raw_lines)
-zero_lines <- which(length == 0)
+read_81x <- function(
+  file
+) {
+  # use readlines to create a list
 
-all_obs <- read_lines(file)
+  raw_lines <- read_lines_raw(file)
+  # use the empty line as a slicer
+  length <- lengths(raw_lines)
+  zero_lines <- which(length == 0)
 
-start_vec <- c(1, (zero_lines[-length(zero_lines)]))
-end_vec <- zero_lines
+  all_obs <- read_lines(file)
 
-# extractin the first batch of obs
-# start <- 0
-# end <- (zero_lines[1] - 1)
-# one_obs <- all_obs[start:end]
+  start_vec <- c(1, (zero_lines[-length(zero_lines)]))
+  end_vec <- zero_lines
 
-# oneobs_81x(file, all_obs, start_vec[1], end_vec[1]) |> str()
+  output <- map2(start_vec, end_vec, oneobs_81x, all_obs, file) |>
+    bind_rows(.id = "id")
 
-# data_file <- tibble()
-
-# for (i in 1:length(zero_lines)) {
-
-#   data_file[i] <- oneobs_81x(file, all_obs, start_vec[i], end_vec[i])
-
-
-# }
-# data_file
-
-# test <- tibble(
-#     start_vec,
-#     end_vec
-# ) |>
-# mutate(
-#     data = map(all_obs, oneobs_81x, file = file, all_obs = all_obs, start = start_vec, end = end_vec)
-# )
-
-# map(all_obs, oneobs_81x, file = file, all_obs = all_obs, start = start_vec, end = end_vec)
-# map2(start_vec, end_vec, oneobs_81x, start = start_vec, end = end_vec, file = file, all_obs = all_obs)
-
-# oneobs_81x(start_vec[1], end_vec[1])
-output <- map2(start_vec, end_vec, oneobs_81x) |>
-    bind_rows(.id = "column_label")
-
-# bind_rows(output, .id = "column_label")
-head(output)
-class(output)
-str(output)
-View(output)
-output["data"][[1]]
+  output
+}
