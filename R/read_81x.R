@@ -22,20 +22,37 @@ meta_loc <- as.numeric(first_el) |>
 is.na() |>
 which()
 
-asnum <- as.numeric(first_el)
-data_loc <- which(!is.na(as.numeric(first_el)))
-# col_names <- min(data_loc) - 1
-# data_loc <- append(data_loc, col_names, 0)
-line_skip <- min(data_loc) - 2 # because we also want to get the row with col names
-line_max <- max(data_loc)
+# asnum <- as.numeric(first_el) #dirty
+data_loc <- which(!is.na(as.numeric(first_el))) # location of data row are where as.numeric did not produce NA
+col_names <- min(data_loc) - 1 # row with col names  is just before the first numeric row
+data_loc <- append(data_loc, col_names, 0) # we add its row number to the location of data
+line_skip <- min(data_loc) - 1 # we want to skip everything before the colnames
+line_max <- max(data_loc) # skipping everything after the last row of data
 
 obs_data <- read_tsv(single_file, skip = line_skip, n_max = line_max)
+str(obs_data)
 
 # now to read meta data
 
+metadata <- read_yaml(text = obs[-data_loc]) |>
+compact()
+str(metadata)
+enframe(metadata) |>
+unnest(value)
 
-obs[-meta_loc]
+# compact(metadata)
 
-is.numeric(first_el[124])
+table_meta <- stack(metadata) |>
+pivot_wider(names_from = ind, values_from = values)
 
-header <- scan(single_file, what = character())
+# as_tibble(metadata)
+# table_meta <- map_dfr(metadata, ~ .x)
+table_meta <- enframe(metadata) |>
+pivot_wider(names_from = name, values_from = value) |>
+unnest(names(table_meta)) |>
+replace("NULL", NA)
+
+
+View(table_meta)
+str(table_meta)
+
