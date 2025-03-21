@@ -13,3 +13,12 @@ devtools::run_examples()
 
 # check the tests work
 devtools::test()
+
+# to make the webpage
+usethis::use_pkgdown()
+pkgdown::build_site()
+usethis::use_pkgdown_github_pages()
+
+
+usethis::use_readme_rmd()
+devtools::build_readme()
