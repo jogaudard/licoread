@@ -12,7 +12,7 @@ zero_lines <- which(length == 0)
 
 all_obs <- read_lines(file)
 
-start_vec <- c(0, (zero_lines[-length(zero_lines)] + 1))
+start_vec <- c(1, (zero_lines[-length(zero_lines)]))
 end_vec <- zero_lines
 
 # extractin the first batch of obs
@@ -44,8 +44,12 @@ end_vec <- zero_lines
 # map2(start_vec, end_vec, oneobs_81x, start = start_vec, end = end_vec, file = file, all_obs = all_obs)
 
 # oneobs_81x(start_vec[1], end_vec[1])
-output <- map2(start_vec, end_vec, oneobs_81x)
+output <- map2(start_vec, end_vec, oneobs_81x) |>
+    bind_rows(.id = "column_label")
 
+# bind_rows(output, .id = "column_label")
+head(output)
 class(output)
 str(output)
 View(output)
+output["data"][[1]]

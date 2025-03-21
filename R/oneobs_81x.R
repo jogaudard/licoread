@@ -21,7 +21,7 @@ col_names_loc <- min(data_loc) - 1 # row with col names  is just before the firs
 data_loc <- append(data_loc, col_names_loc, 0)
 
 # read data
-line_skip <- min(data_loc) - 1 + start # we want to skip everything before the colnames
+line_skip <- min(data_loc) - 2 + start # we want to skip everything before the colnames
 line_max <- max(data_loc) - line_skip - 1 # skipping everything after the last row of data
 
 # read tsv is longer, but much safer than re using the one_obs list (in case there are empty cells)
