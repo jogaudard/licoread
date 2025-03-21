@@ -84,6 +84,3 @@ str(one_obs)
 View(one_obs)
 
 
-# all at once? without map or loop?
-
-
