@@ -7,6 +7,8 @@
 #' @importFrom purrr map2
 #' @importFrom dplyr bind_rows
 #' @export
+#' @examples
+#' read_81x("raw_files/10-28-2011.81x")
 
 read_81x <- function(
   file

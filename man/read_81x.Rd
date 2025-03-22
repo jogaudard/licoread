@@ -16,3 +16,6 @@ the raw data nested
 \description{
 reads a .81x file with several measurements
 }
+\examples{
+read_81x("raw_files/10-28-2011.81x")
+}
