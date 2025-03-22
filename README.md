@@ -9,9 +9,9 @@
 <!-- badges: end -->
 
 The goal of licoread is to provide an easy way to load licor files as R
-objects that can be used by the
+objects that can be used with the
 [Fluxible](https://plant-functional-trait-course.github.io/fluxible/)
-pacakge.
+package.
 
 ## Installation
 
