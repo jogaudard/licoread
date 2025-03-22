@@ -25,11 +25,10 @@ read_81x <- function(
   all_obs <- read_lines(file)
 
   start_vec <- c(1, (zero_lines[-length(zero_lines)]))
-  end_vec <- zero_lines
 
   output <- map2(
     start_vec,
-    end_vec,
+    zero_lines,
     oneobs_81x,
     all_obs,
     file,
