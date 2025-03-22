@@ -8,7 +8,9 @@
 #' @importFrom dplyr bind_rows
 #' @export
 #' @examples
-#' read_81x("raw_files/10-28-2011.81x")
+#' path <- system.file("extdata", package = "licoread")
+#' file <- paste(path, "10-28-2011.81x", sep = "/")
+#' read_81x(file)
 
 read_81x <- function(
   file
@@ -25,7 +27,14 @@ read_81x <- function(
   start_vec <- c(1, (zero_lines[-length(zero_lines)]))
   end_vec <- zero_lines
 
-  output <- map2(start_vec, end_vec, oneobs_81x, all_obs, file) |>
+  output <- map2(
+    start_vec,
+    end_vec,
+    oneobs_81x,
+    all_obs,
+    file,
+    .progress = TRUE
+  ) |>
     bind_rows(.id = "id")
 
   output
