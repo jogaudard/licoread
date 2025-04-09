@@ -57,3 +57,30 @@ View(metadata_sep)
 #         )
 #     )
 # metadata_conv
+
+data_file <- paste0(filepath, "/data.csv")
+
+data_file <- unz(filepath, "data.csv")
+
+data_name1 <- unz(filepath, "data.csv") |>
+    read_csv(n_max = 1, col_names = FALSE)
+
+data_name1 <- as.character(data_name1[1,])
+
+data_name2 <- unz(filepath, "data.csv") |>
+    read_csv(skip = 1, n_max = 1, col_names = FALSE)
+
+data_name2 <- as.character(data_name2[1,])
+
+data_name <- tibble(
+    data_name1,
+    data_name2
+) |>
+mutate(
+    names = paste(data_name1, data_name2, sep = "_")
+) |>
+pull(names) |>
+as.character()
+
+data_data <- unz(filepath, "data.csv") |>
+    read_csv(skip = 3, col_names = data_name)
