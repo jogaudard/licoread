@@ -3,7 +3,7 @@
 #' 
 
 
-flux_id <- function(
+licoread_to_fluxible <- function(
     raw_conc,
     id_cols = c("Obs#", "File Name"),
     datetime_col = "Date",
