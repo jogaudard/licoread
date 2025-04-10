@@ -6,6 +6,13 @@
 \usage{
 oneobs_82z(filepath, filename = "data.csv", meta_file = "metadata.json")
 }
+\arguments{
+\item{filepath}{name and path to the 82z archive}
+
+\item{filename}{name of the file with raw data}
+
+\item{meta_file}{name of the file with meta data}
+}
 \description{
 to read one measurement from the 82z archive
 }

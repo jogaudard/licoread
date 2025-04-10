@@ -84,3 +84,8 @@ as.character()
 
 data_data <- unz(filepath, "data.csv") |>
     read_csv(skip = 3, col_names = data_name)
+
+debug(oneobs_82z)
+debug(metadata_82z)
+
+oneobs_82z("local_stuff/20240725_sample_data_all_gases/82m-0109-20240725000057.82z")

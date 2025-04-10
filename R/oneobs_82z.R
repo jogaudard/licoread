@@ -1,6 +1,8 @@
 #' to read one measurement from the 82z archive
-#' 
-#' 
+#' @param filepath name and path to the 82z archive
+#' @param filename name of the file with raw data
+#' @param meta_file name of the file with meta data
+#' @importFrom rlang .data
 
 oneobs_82z <- function(
     filepath,
@@ -13,7 +15,7 @@ oneobs_82z <- function(
     )
 
     meta_df <- metadata |>
-        filter(is.na("group"))
+        filter(.data$name2 == "area")
 
     meta_cols <- metadata |>
         filter(!is.na("group"))
