@@ -1,10 +1,13 @@
 #' to read the raw data
-#' 
-#' 
+#' @param filepath name and path to the 82z archive
+#' @param filename name of the file with raw data
+#' @importFrom readr read_csv
+#' @importFrom tibble tibble
+#' @importFrom dplyr mutate pull
 
 data_82z <- function(
     filepath,
-    filename = "data.csv"){
+    filename){
 
 
 
