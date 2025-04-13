@@ -14,7 +14,6 @@ devtools::run_examples()
 # check the tests work
 devtools::test()
 
-devtools::load_all()
 
 usethis::use_package("tidyr")
 

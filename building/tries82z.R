@@ -90,7 +90,13 @@ debug(metadata_82z)
 
 oneobs_82z(
   path = "local_stuff/20240725_sample_data_all_gases/",
-  filename = "82m-0109-20240725000057.82z"
+  filename = "82m-0109-20240725000057.82z",
+  data_file = "data.csv",
+  meta_file = "metadata.json"
   )
 
+debug(read_82z)
 
+test <- read_82z(
+  path = "local_stuff/20240725_sample_data_all_gases/"
+)

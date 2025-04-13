@@ -5,7 +5,7 @@
 #' @param meta_file name of the file with meta data
 #' @importFrom rlang .data
 #' @importFrom dplyr filter mutate case_when select bind_cols
-#' @importFrom tidyr unite pivot_wider pivot_long nest
+#' @importFrom tidyr unite pivot_wider pivot_longer nest
 
 oneobs_82z <- function(
   path,
@@ -69,7 +69,7 @@ oneobs_82z <- function(
 
   data_long <- data |>
     pivot_longer(pivot, names_to = "gas", values_to = "conc") |>
-    nest(.by = .data$gas)
+    nest(.by = "gas")
 
   oneobs_data <- bind_cols(data_long, meta_df) |>
     mutate(

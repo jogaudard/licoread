@@ -4,12 +4,14 @@
 \alias{oneobs_82z}
 \title{to read one measurement from the 82z archive}
 \usage{
-oneobs_82z(filepath, filename = "data.csv", meta_file = "metadata.json")
+oneobs_82z(path, filename, data_file, meta_file)
 }
 \arguments{
-\item{filepath}{name and path to the 82z archive}
+\item{path}{path to the 82z archive}
 
-\item{filename}{name of the file with raw data}
+\item{filename}{name of the 82z archive}
+
+\item{data_file}{name of the file with raw data}
 
 \item{meta_file}{name of the file with meta data}
 }

@@ -4,12 +4,12 @@
 \alias{data_82z}
 \title{to read the raw data}
 \usage{
-data_82z(filepath, filename)
+data_82z(filepath, data_file)
 }
 \arguments{
 \item{filepath}{name and path to the 82z archive}
 
-\item{filename}{name of the file with raw data}
+\item{data_file}{name of the file with raw data}
 }
 \description{
 to read the raw data

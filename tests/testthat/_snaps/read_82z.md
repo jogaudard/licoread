@@ -62,9 +62,6 @@
         data %>% select(all_of(pivot))
       
       See <https://tidyselect.r-lib.org/reference/faq-external-vector.html>.
-      Warning:
-      Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
-      i Please use `"gas"` instead of `.data$gas`
     Output
       tibble [4 x 38] (S3: tbl_df/tbl/data.frame)
        $ gas                                    : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
