@@ -89,8 +89,8 @@ debug(oneobs_82z)
 debug(metadata_82z)
 
 oneobs_82z(
-  "local_stuff/20240725_sample_data_all_gases/",
-  "82m-0109-20240725000057.82z"
+  path = "local_stuff/20240725_sample_data_all_gases/",
+  filename = "82m-0109-20240725000057.82z"
   )
 
 
