@@ -10,11 +10,14 @@
 oneobs_82z <- function(
   path,
   filename,
-  data_file = "data.csv",
-  meta_file = "metadata.json"
+#   filepath,
+  data_file,
+  meta_file
 ) {
 
+    # filename <- str_extract(filepath, )
   filepath <- paste0(path, filename)
+  # extract filename from filepath and work with filepath in the input (easire with dir_ls)
 
   metadata <- metadata_82z(
     filepath = filepath,

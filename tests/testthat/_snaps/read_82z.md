@@ -1,7 +1,8 @@
 # can one file
 
     Code
-      str(oneobs_82z(path = test_path("test82z/"), filename = "82m-0109-20240725000057.82z"))
+      str(oneobs_82z(path = test_path("test82z/"), filename = "82m-0109-20240725000057.82z",
+      data_file = "data.csv", meta_file = "metadata.json"))
     Condition
       Warning:
       Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
