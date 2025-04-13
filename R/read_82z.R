@@ -22,7 +22,7 @@ read_82z <- function(
   format = "Importing files {cli::pb_bar} {cli::pb_percent}",
   clear = TRUE))
 
-    output <- list_rbind(list)
+  output <- list_rbind(list)
   
   output
 }
