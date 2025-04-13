@@ -3,6 +3,7 @@
 export(read_81x)
 importFrom(dplyr,bind_cols)
 importFrom(dplyr,bind_rows)
+importFrom(dplyr,filter)
 importFrom(dplyr,mutate)
 importFrom(dplyr,pull)
 importFrom(jsonlite,fromJSON)
