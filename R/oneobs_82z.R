@@ -4,7 +4,7 @@
 #' @param data_file name of the file with raw data
 #' @param meta_file name of the file with meta data
 #' @importFrom rlang .data
-#' @importFrom dplyr filter mutate case_when select bind_cols
+#' @importFrom dplyr filter mutate case_when select bind_cols left_join
 #' @importFrom tidyr unite pivot_wider pivot_longer nest
 
 oneobs_82z <- function(
@@ -60,33 +60,33 @@ oneobs_82z <- function(
       group = paste(.data$FLUX_GAS_SOURCE, .data$FLUX_GAS, sep = "_")
     )
 
-  pivot <- meta_cols$group
+  gases <- meta_cols$group
 
   data_name <- data_name_82z(
     filepath = filepath,
     data_file = data_file
   )
 
-  data <- data_82z(
+  data_data <- data_82z(
     filepath = filepath,
     data_file = data_file,
-    data_name = data_name
+    data_name = data_name,
+    gases = gases,
+    filename = filename
   )
 
   data_units <- units_82z(
     filepath = filepath,
     data_file = data_file,
-    data_name = data_name
+    data_name = data_name,
+    filename = filename
     )
 
-  data_long <- data |>
-    pivot_longer(all_of(pivot), names_to = "gas", values_to = "conc") |>
-    nest(.by = "gas")
+  data <- data_data |>
+    left_join(data_units, by = "fluxid")
+  
 
-  oneobs_data <- bind_cols(data_long, meta_df) |>
-    mutate(
-      fluxid = filename
-    )
+  oneobs_data <- bind_cols(data, meta_df)
 
   oneobs_data
 

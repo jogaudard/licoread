@@ -87,8 +87,10 @@ data_data <- unz(filepath, "data.csv") |>
 
 debug(oneobs_82z)
 debug(metadata_82z)
+debug(units_82z)
+debug(data_82z)
 
-oneobs_82z(
+test_oneobs <- oneobs_82z(
   path = "local_stuff/20240725_sample_data_all_gases/",
   filename = "82m-0109-20240725000057.82z",
   data_file = "data.csv",
@@ -100,3 +102,5 @@ debug(read_82z)
 test <- read_82z(
   path = "local_stuff/20240725_sample_data_all_gases/"
 )
+str(test, max.level = 2)
+attributes(test_oneobs)
