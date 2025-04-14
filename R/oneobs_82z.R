@@ -30,10 +30,10 @@ oneobs_82z <- function(
   names_meta_df <- names_df(meta_df)
 
   meta_df <- meta_df |>
-    unite(name, names_meta_df) |>
+    unite("name", all_of(names_meta_df)) |>
     mutate(
       name = case_when(
-        is.na(.data$UNITS) ~ name,
+        is.na(.data$UNITS) ~ .data$name,
         !is.na(.data$UNITS) ~ paste(.data$name, .data$UNITS, sep = "_")
       )
     ) |>
@@ -47,10 +47,10 @@ oneobs_82z <- function(
   names_meta_cols <- names_df(meta_cols)
 
   meta_cols <- meta_cols |>
-    unite(name, names_meta_cols) |>
+    unite(name, all_of(names_meta_cols)) |>
     mutate(
       name = case_when(
-        is.na(.data$UNITS) ~ name,
+        is.na(.data$UNITS) ~ .data$name,
         !is.na(.data$UNITS) ~ paste(.data$name, .data$UNITS, sep = "_")
       )
     ) |>
@@ -62,13 +62,25 @@ oneobs_82z <- function(
 
   pivot <- meta_cols$group
 
-  data <- data_82z(
+  data_name <- data_name_82z(
     filepath = filepath,
     data_file = data_file
   )
 
+  data <- data_82z(
+    filepath = filepath,
+    data_file = data_file,
+    data_name = data_name
+  )
+
+  data_units <- units_82z(
+    filepath = filepath,
+    data_file = data_file,
+    data_name = data_name
+    )
+
   data_long <- data |>
-    pivot_longer(pivot, names_to = "gas", values_to = "conc") |>
+    pivot_longer(all_of(pivot), names_to = "gas", values_to = "conc") |>
     nest(.by = "gas")
 
   oneobs_data <- bind_cols(data_long, meta_df) |>
