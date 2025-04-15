@@ -6,7 +6,7 @@ test_that("can read one file", {
       meta_file = "metadata.json",
       regex_file = "(\\w*-)*\\w*(?=([.]82z$))"
     ) |>
-      str(digits.d = 4)
+      str()
   )
 })
 
@@ -16,7 +16,7 @@ test_that("can read several files", {
     read_82z(
       path = test_path("test82z/")
     ) |>
-      str(digits.d = 4)
+      str()
   )
 })
 
