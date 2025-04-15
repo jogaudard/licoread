@@ -1,6 +1,7 @@
 #' create colnames for data tibble
 #' @param filepath name and path to the 82z archive
 #' @param data_file name of the file with raw data
+#' @return a character vector or the colnames of the data file
 #' @importFrom readr read_csv
 #' @importFrom tibble tibble
 #' @importFrom tidyr unite

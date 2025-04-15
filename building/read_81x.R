@@ -6,16 +6,16 @@
 #' @importFrom purrr map list_rbind
 
 read_81x <- function(
-  location
+  file_list
 ) {
-  list <- list.files(
-    location,
-    pattern = "*.81x$",
-    full.names = TRUE,
-    recursive = TRUE
-  )
+#   file_list <- list.files(
+#     location,
+#     pattern = "*.81x$",
+#     full.names = TRUE,
+#     recursive = TRUE
+#   )
 
-  list <- list |>
+  obs_list <- file_list |>
     map(\(x) {
       read_81x_onefile(
         file = x
@@ -27,7 +27,7 @@ read_81x <- function(
       clear = TRUE
     ))
 
-  output <- list_rbind(list)
+  output <- list_rbind(obs_list)
 
   output
 }

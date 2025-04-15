@@ -11,6 +11,9 @@ names_df(df, regname = "name\\\\d")
 
 \item{regname}{the regex expression to match}
 }
+\value{
+a df with the names of the meta df
+}
 \description{
 to get a vector of names of a df, matching a regex
 }
