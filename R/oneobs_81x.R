@@ -46,7 +46,8 @@ oneobs_81x <- function(
     file,
     skip = line_skip,
     n_max = line_max,
-    show_col_types = FALSE
+    show_col_types = FALSE,
+    progress = FALSE
   ))
 
   # read meta data

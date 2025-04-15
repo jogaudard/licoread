@@ -6,11 +6,6 @@
 #' @importFrom readr read_lines_raw read_lines
 #' @importFrom purrr map2
 #' @importFrom dplyr bind_rows
-#' @export
-#' @examples
-#' path <- system.file("extdata", package = "licoread")
-#' file <- paste(path, "10-28-2011.81x", sep = "/")
-#' read_81x(file)
 
 read_81x_onefile <- function(
   file

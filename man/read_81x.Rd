@@ -2,22 +2,21 @@
 % Please edit documentation in R/read_81x.R
 \name{read_81x}
 \alias{read_81x}
-\title{reads 81x licor files}
+\title{reading several 81x files in a folder}
 \usage{
-read_81x(file)
+read_81x(location)
 }
 \arguments{
-\item{file}{filepath the the 81x file to read}
+\item{location}{location of the files}
 }
 \value{
 a nested tibble with the meta data from each measurements as row and
 the raw data nested
 }
 \description{
-reads a .81x file with several measurements
+reads several .81x files with several measurements
 }
 \examples{
-path <- system.file("extdata", package = "licoread")
-file <- paste(path, "10-28-2011.81x", sep = "/")
-read_81x(file)
+path <- system.file("extdata/81x", package = "licoread")
+read_81x(path)
 }
