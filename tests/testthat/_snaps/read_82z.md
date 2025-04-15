@@ -434,7 +434,7 @@
 # can read several files
 
     Code
-      str(read_82z(path = test_path("test82z/")))
+      str(read_82z(path = test_path("test82z/")), digits.d = 3)
     Output
       tibble [7 x 44] (S3: tbl_df/tbl/data.frame)
        $ fluxid                                 : chr [1:7] "82m-0109-20240725000057" "82m-0109-20240725000508" "82m-0109-20240725000919" "82m-0109-20240725001331" ...
