@@ -7,16 +7,14 @@
 oneobs_82z(filepath, data_file, meta_file, regex_file)
 }
 \arguments{
+\item{filepath}{path to the 82z archive}
+
 \item{data_file}{name of the file with raw data}
 
 \item{meta_file}{name of the file with meta data}
 
 \item{regex_file}{regex expression matching the name of the 82z file. Here
 in case the user has a different than the default and for easier updates.}
-
-\item{path}{path to the 82z archive}
-
-\item{filename}{name of the 82z archive}
 }
 \description{
 to read one measurement from the 82z archive

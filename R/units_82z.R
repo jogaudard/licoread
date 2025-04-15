@@ -2,7 +2,7 @@
 #' @param filepath name and path to the 82z archive
 #' @param data_file name of the file with raw data
 #' @param data_name vector of colnames
-#' @param gases list of gases
+#' @param filename name of the 82z archive
 #' @importFrom readr read_csv
 #' @importFrom tidyr pivot_longer nest
 #' @importFrom dplyr all_of mutate

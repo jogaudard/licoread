@@ -13,7 +13,7 @@ units_82z(filepath, data_file, data_name, filename)
 
 \item{data_name}{vector of colnames}
 
-\item{gases}{list of gases}
+\item{filename}{name of the 82z archive}
 }
 \description{
 to create a nested tibble with the units of data

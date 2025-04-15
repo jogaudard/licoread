@@ -2,6 +2,7 @@
 #' @param df the df to get the names from
 #' @param regname the regex expression to match
 #' @importFrom stringr str_extract
+#' @importFrom stats na.omit
 
 names_df <- function(
   df,

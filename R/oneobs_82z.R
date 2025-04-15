@@ -1,6 +1,5 @@
 #' to read one measurement from the 82z archive
-#' @param path path to the 82z archive
-#' @param filename name of the 82z archive
+#' @param filepath path to the 82z archive
 #' @param data_file name of the file with raw data
 #' @param meta_file name of the file with meta data
 #' @param regex_file regex expression matching the name of the 82z file. Here
@@ -47,7 +46,7 @@ oneobs_82z <- function(
   names_meta_cols <- names_df(meta_cols)
 
   meta_cols <- meta_cols |>
-    unite(name, all_of(names_meta_cols)) |>
+    unite("name", all_of(names_meta_cols)) |>
     mutate(
       name = case_when(
         is.na(.data$UNITS) ~ .data$name,

@@ -12,6 +12,10 @@ data_82z(filepath, data_file, data_name, gases, filename)
 \item{data_file}{name of the file with raw data}
 
 \item{data_name}{vector of colnames}
+
+\item{gases}{list of gases}
+
+\item{filename}{name of the 82z archive}
 }
 \description{
 to read the raw data

@@ -19,6 +19,8 @@ usethis::use_package("stringr")
 
 devtools::check()
 
+lintr::lint_package()
+
 devtools::load_all()
 
 # to make the webpage
