@@ -15,6 +15,9 @@ units_82z(filepath, data_file, data_name, filename)
 
 \item{filename}{name of the 82z archive}
 }
+\value{
+a tibble with the units of the variables contained in the raw data
+}
 \description{
 to create a nested tibble with the units of data
 }

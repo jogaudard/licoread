@@ -8,3 +8,5 @@ local_stuff
 ^docs$
 ^pkgdown$
 ^README\.Rmd$
+^doc$
+^Meta$

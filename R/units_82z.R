@@ -3,6 +3,7 @@
 #' @param data_file name of the file with raw data
 #' @param data_name vector of colnames
 #' @param filename name of the 82z archive
+#' @return a tibble with the units of the variables contained in the raw data
 #' @importFrom readr read_csv
 #' @importFrom tidyr pivot_longer nest
 #' @importFrom dplyr all_of mutate

@@ -1,4 +1,4 @@
-#' reads 81x licor files
+#' reads 81x licor file
 #' @description reads a .81x file with several measurements
 #' @param file filepath the the 81x file to read
 #' @return a nested tibble with the meta data from each measurements as row and
@@ -6,13 +6,8 @@
 #' @importFrom readr read_lines_raw read_lines
 #' @importFrom purrr map2
 #' @importFrom dplyr bind_rows
-#' @export
-#' @examples
-#' path <- system.file("extdata", package = "licoread")
-#' file <- paste(path, "10-28-2011.81x", sep = "/")
-#' read_81x(file)
 
-read_81x <- function(
+read_81x_onefile <- function(
   file
 ) {
   # use readlines to create a list

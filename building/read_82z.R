@@ -7,18 +7,19 @@
 #' @importFrom purrr map list_rbind
 
 read_82z <- function(
-  path,
-  data_file = "data.csv",
-  meta_file = "metadata.json",
-  regex_file = "(\\w*-)*\\w*(?=([.]82z$))"
+  file_list,
+  data_file,
+  meta_file,
+  regex_file
 ) {
-  list <- list.files(
-    path, pattern = "*.82z$",
-    full.names = TRUE,
-    recursive = TRUE
-  )
+  # file_list <- list.files(
+  #   path,
+  #   pattern = "*.82z$",
+  #   full.names = TRUE,
+  #   recursive = TRUE
+  # )
 
-  list <- list |>
+  obs_list <- file_list |>
     map(\(x) {
       oneobs_82z(
         filepath = x,
@@ -33,7 +34,7 @@ read_82z <- function(
       clear = TRUE
     ))
 
-  output <- list_rbind(list)
+  output <- list_rbind(obs_list)
 
   output
 }

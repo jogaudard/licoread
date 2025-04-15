@@ -1,0 +1,29 @@
+---
+title: "licoread"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{licoread}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Importing the data
+```{r setup}
+library(licoread)
+# this step is not needed if you know where your data are
+path <- system.file("extdata/82z", package = "licoread")
+# provide the location of your raw files to licoread
+data <- licoread(path)
+
+# if your location containes more than one file type, you will have to specify
+# which files licoread should read
+path <- system.file("extdata/mixed_files", package = "licoread")
+data <- licoread(path, file_type = "82z")
+```

@@ -11,6 +11,9 @@ data_name_82z(filepath, data_file)
 
 \item{data_file}{name of the file with raw data}
 }
+\value{
+a character vector or the colnames of the data file
+}
 \description{
 create colnames for data tibble
 }

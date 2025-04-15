@@ -11,6 +11,9 @@ metadata_82z(filepath, meta_file)
 
 \item{meta_file}{name of the file with meta data}
 }
+\value{
+a tibble with the metadata from one observation
+}
 \description{
 read meta data file inside 82z archive
 }

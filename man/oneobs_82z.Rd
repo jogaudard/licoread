@@ -16,6 +16,10 @@ oneobs_82z(filepath, data_file, meta_file, regex_file)
 \item{regex_file}{regex expression matching the name of the 82z file. Here
 in case the user has a different than the default and for easier updates.}
 }
+\value{
+a tibble with all the data and metadata from one observation
+(one file)
+}
 \description{
 to read one measurement from the 82z archive
 }

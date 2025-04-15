@@ -9,29 +9,3 @@ test_that("can read one file", {
       str()
   )
 })
-
-
-test_that("can read several files", {
-  expect_snapshot(
-    read_82z(
-      path = test_path("test82z/")
-    ) |>
-      str(digits.d = 4, width = 100, strict.width = "cut")
-  )
-})
-
-test_that("can read several files in subfolders", {
-
-  subfolders_reading <- read_82z(
-    path = test_path("sub_82z/")
-  )
-
-  onefolder_reading <- read_82z(
-    path = test_path("test82z/")
-  )
-
-  expect_equal(
-    subfolders_reading,
-    onefolder_reading
-  )
-})

@@ -31,4 +31,7 @@ usethis::use_pkgdown_github_pages()
 usethis::use_readme_rmd()
 devtools::build_readme()
 
+usethis::use_vignette("licoread")
+devtools::build_vignettes()
+
 rcompendium::add_lifecycle_badge(lifecycle = "experimental", quiet = FALSE)

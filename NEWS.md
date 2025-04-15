@@ -1,3 +1,8 @@
+# licoread 0.0.2
+
+* `licoread`: function to read all Li-COR raw files in 82z or 81x format in a given location and return a tibble without losing any data or units.
+* functions `read_82z` and `read_81x` removed as they got integrated in `licoread`
+
 # licoread 0.0.1
 
 * `read_82z`: function to read several .82z files in a given location (including in location subfolders).
