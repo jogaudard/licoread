@@ -4,22 +4,17 @@
 \alias{read_82z}
 \title{to read several 82z files}
 \usage{
-read_82z(
-  path,
-  data_file = "data.csv",
-  meta_file = "metadata.json",
-  regex_file = "(\\\\w*-)*\\\\w*(?=([.]82z$))"
-)
+read_82z(file_list, data_file, meta_file, regex_file)
 }
 \arguments{
-\item{path}{location of the 82z files}
-
 \item{data_file}{name of the file with raw data}
 
 \item{meta_file}{name of the file with meta data}
 
 \item{regex_file}{regex expression matching the name of the 82z file. Here
 in case the user has a different than the default and for easier updates.}
+
+\item{path}{location of the 82z files}
 }
 \description{
 to read several 82z files

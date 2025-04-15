@@ -4,7 +4,7 @@
 \alias{read_81x}
 \title{reading several 81x files in a folder}
 \usage{
-read_81x(location)
+read_81x(file_list)
 }
 \arguments{
 \item{location}{location of the files}
@@ -15,8 +15,4 @@ the raw data nested
 }
 \description{
 reads several .81x files with several measurements
-}
-\examples{
-path <- system.file("extdata/81x", package = "licoread")
-read_81x(path)
 }

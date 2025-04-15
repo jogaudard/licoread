@@ -434,7 +434,8 @@
 # can read several files
 
     Code
-      str(read_82z(path = test_path("test82z/")), digits.d = 4, width = 100,
+      str(read_82z(file_list = file_list, data_file = "data.csv", meta_file = "metadata.json",
+        regex_file = "(\\w*-)*\\w*(?=([.]82z$))"), digits.d = 4, width = 100,
       strict.width = "cut")
     Output
       tibble [7 x 44] (S3: tbl_df/tbl/data.frame)

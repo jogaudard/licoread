@@ -3,5 +3,15 @@ test_that("can read file", {
 })
 
 test_that("can read several files", {
-  expect_equal(nrow(read_81x(test_path("test81x/"))), 25)
+
+  location <- test_path("test81x/")
+
+file_list <- list.files(
+    location,
+    pattern = "*.81x$",
+    full.names = TRUE,
+    recursive = TRUE
+  )
+
+  expect_equal(nrow(read_81x(file_list)), 25)
 })
