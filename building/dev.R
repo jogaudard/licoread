@@ -14,9 +14,12 @@ devtools::run_examples()
 # check the tests work
 devtools::test()
 
-usethis::use_package("tidyr")
+
+usethis::use_package("stringr")
 
 devtools::check()
+
+lintr::lint_package()
 
 devtools::load_all()
 
@@ -27,3 +30,5 @@ usethis::use_pkgdown_github_pages()
 
 usethis::use_readme_rmd()
 devtools::build_readme()
+
+rcompendium::add_lifecycle_badge(lifecycle = "experimental", quiet = FALSE)
