@@ -1,11 +1,11 @@
 # can read one file
 
     Code
-      str(oneobs_82z(path = test_path("test82z/"), filename = "82m-0109-20240725000057.82z",
-      data_file = "data.csv", meta_file = "metadata.json"))
+      str(oneobs_82z(filepath = test_path("test82z/82m-0109-20240725000057.82z"),
+      data_file = "data.csv", meta_file = "metadata.json", regex_file = "(\\w*-)*\\w*(?=([.]82z$))"))
     Output
       tibble [1 x 38] (S3: tbl_df/tbl/data.frame)
-       $ fluxid                                 : chr "82m-0109-20240725000057.82z"
+       $ fluxid                                 : chr "82m-0109-20240725000057"
        $ data                                   :List of 1
         ..$ : tibble [131 x 85] (S3: tbl_df/tbl/data.frame)
         .. ..$ LI-8250_DATE                  : num [1:131] 20240725 20240725 20240725 20240725 20240725 ...
@@ -437,7 +437,7 @@
       str(read_82z(path = test_path("test82z/")))
     Output
       tibble [7 x 44] (S3: tbl_df/tbl/data.frame)
-       $ fluxid                                 : chr [1:7] "82m-0109-20240725000057.82z" "82m-0109-20240725000508.82z" "82m-0109-20240725000919.82z" "82m-0109-20240725001331.82z" ...
+       $ fluxid                                 : chr [1:7] "82m-0109-20240725000057" "82m-0109-20240725000508" "82m-0109-20240725000919" "82m-0109-20240725001331" ...
        $ data                                   :List of 7
         ..$ : tibble [131 x 85] (S3: tbl_df/tbl/data.frame)
         .. ..$ LI-8250_DATE                  : num [1:131] 20240725 20240725 20240725 20240725 20240725 ...

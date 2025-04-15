@@ -91,10 +91,12 @@ debug(units_82z)
 debug(data_82z)
 
 test_oneobs <- oneobs_82z(
-  path = "local_stuff/20240725_sample_data_all_gases/",
-  filename = "82m-0109-20240725000057.82z",
+  # path = "local_stuff/20240725_sample_data_all_gases/",
+  # filename = "82m-0109-20240725000057.82z",
+  filepath = "local_stuff/20240725_sample_data_all_gases/82m-0109-20240725000057.82z",
   data_file = "data.csv",
-  meta_file = "metadata.json"
+  meta_file = "metadata.json",
+  regex_file = "(\\w*-)*\\w*(?=([.]82z$))"
   )
 
 debug(read_82z)

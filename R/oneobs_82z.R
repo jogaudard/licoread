@@ -8,15 +8,16 @@
 #' @importFrom tidyr unite pivot_wider pivot_longer nest
 
 oneobs_82z <- function(
-  path,
-  filename,
-#   filepath,
+  # path,
+  # filename,
+  filepath,
   data_file,
-  meta_file
+  meta_file,
+  regex_file
 ) {
 
-    # filename <- str_extract(filepath, )
-  filepath <- paste0(path, filename)
+    filename <- str_extract(filepath, regex_file)
+  # filepath <- paste0(path, filename)
   # extract filename from filepath and work with filepath in the input (easire with dir_ls)
 
   metadata <- metadata_82z(
