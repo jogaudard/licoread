@@ -4,6 +4,7 @@
 #' @param data_name vector of colnames
 #' @param gases list of gases
 #' @param filename name of the 82z archive
+#' @return a long df with the actual data contained in the data file
 #' @importFrom readr read_csv
 #' @importFrom dplyr all_of mutate
 #' @importFrom tidyr pivot_longer nest

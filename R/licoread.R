@@ -10,8 +10,14 @@
 #' @importFrom purrr map list_rbind
 #' @importFrom stringr str_match
 #' @importFrom stats na.omit
+#' @return a tibble (nested or not depending on raw data) containing all the
+#' data from the raw files present at the location provided
 #' @export
-#' @example 
+#' @examples
+#' path_81x <- system.file("extdata/81x", package = "licoread")
+#' licoread(path_81x)
+#' path_82z <- system.file("extdata/82z", package = "licoread")
+#' licoread(path_82z)
 
 licoread <- function(
     location,

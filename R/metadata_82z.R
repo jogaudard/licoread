@@ -1,6 +1,7 @@
 #' read meta data file inside 82z archive
 #' @param filepath name and path to the 82z archive
 #' @param meta_file name of the file with meta data
+#' @return a tibble with the metadata from one observation
 #' @importFrom jsonlite fromJSON
 #' @importFrom tibble enframe
 #' @importFrom dplyr mutate pull

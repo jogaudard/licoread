@@ -17,6 +17,9 @@ data_82z(filepath, data_file, data_name, gases, filename)
 
 \item{filename}{name of the 82z archive}
 }
+\value{
+a long df with the actual data contained in the data file
+}
 \description{
 to read the raw data
 }

@@ -28,6 +28,16 @@ function will try to detect it by itself.}
 \item{regex_file}{regex expression matching the name of the 82z file. Here
 in case the user has a different than the default and for easier updates.}
 }
+\value{
+a tibble (nested or not depending on raw data) containing all the
+data from the raw files present at the location provided
+}
 \description{
 reads Li-COR files in a given location
+}
+\examples{
+path_81x <- system.file("extdata/81x", package = "licoread")
+licoread(path_81x)
+path_82z <- system.file("extdata/82z", package = "licoread")
+licoread(path_82z)
 }
