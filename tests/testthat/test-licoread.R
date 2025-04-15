@@ -11,28 +11,28 @@ test_that("licoread works with 81x", {
 })
 
 test_that("error when several file types with auto", {
-    expect_error(
-        licoread(test_path("mixed_files")),
-        "More than one file types found, please provide it manually."
-    )
+  expect_error(
+    licoread(test_path("mixed_files")),
+    "More than one file types found, please provide it manually."
+  )
 })
 
 test_that("licoread manual file_type 82z", {
-    expect_snapshot(
-        licoread(
-            location = test_path("mixed_files"),
-            file_type = "82z"
-        )
+  expect_snapshot(
+    licoread(
+      location = test_path("mixed_files"),
+      file_type = "82z"
     )
+  )
 })
 
 test_that("licoread manual file_type 81x", {
-    expect_snapshot(
-        licoread(
-            location = test_path("mixed_files"),
-            file_type = "81x"
-        )
+  expect_snapshot(
+    licoread(
+      location = test_path("mixed_files"),
+      file_type = "81x"
     )
+  )
 })
 
 test_that("licoread can read several files in subfolders", {

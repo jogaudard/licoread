@@ -5,14 +5,14 @@
 #' @importFrom dplyr distinct
 
 licoread_auto <- function(
-    file_list
+  file_list
 ) {
-    extension <- str_extract(file_list, "(?<=[.])\\w*$") |>
+  extension <- str_extract(file_list, "(?<=[.])\\w*$") |>
     unique()
 
-        if (length(extension) > 1) {
-            stop("More than one file types found, please provide it manually.")
-        }
-    
-    extension
+  if (length(extension) > 1) {
+    stop("More than one file types found, please provide it manually.")
+  }
+
+  extension
 }
