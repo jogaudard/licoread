@@ -14,8 +14,11 @@ Config/testthat/edition: 3
 URL: https://jogaudard.github.io/licoread/
 Imports: 
     dplyr,
+    jsonlite,
     purrr,
     readr,
+    rlang,
+    stringr,
     tibble,
     tidyr,
     yaml

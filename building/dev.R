@@ -14,9 +14,12 @@ devtools::run_examples()
 # check the tests work
 devtools::test()
 
-usethis::use_package("tidyr")
+
+usethis::use_package("stringr")
 
 devtools::check()
+
+lintr::lint_package()
 
 devtools::load_all()
 
