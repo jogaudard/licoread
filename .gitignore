@@ -53,3 +53,5 @@ rsconnect/
 docs
 local_stuff
 inst/doc
+/doc/
+/Meta/
