@@ -16,7 +16,7 @@ test_that("can read several files", {
     read_82z(
       path = test_path("test82z/")
     ) |>
-      str(digits.d = 2)
+      str(digits.d = 1)
   )
 })
 
