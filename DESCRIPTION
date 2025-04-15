@@ -1,6 +1,7 @@
 Package: licoread
 Title: Reads Raw Files from Li-COR Gas Analyzers
-Version: 0.0.0.9000
+Version: 0.0.1
+Date: 2025-04-25
 Authors@R: 
     person("Joseph", "Gaudard", , "joseph.gaudard@pm.me", role = c("aut", "cre"))
 Description: The licoread package reads raw files from Li-COR gas analyzers and creates an R object that can directly be inputed in the Fluxible R package.
@@ -11,7 +12,6 @@ RoxygenNote: 7.3.2
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
-URL: https://jogaudard.github.io/licoread/
 Imports: 
     dplyr,
     jsonlite,
@@ -22,3 +22,6 @@ Imports:
     tibble,
     tidyr,
     yaml
+LazyData: true
+URL: https://jogaudard.github.io/licoread/
+BugReports: https://github.com/jogaudard/licoread/issues

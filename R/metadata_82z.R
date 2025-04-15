@@ -44,9 +44,12 @@ metadata_82z <- function(
       names_repair = "unique", too_few = "align_start"
     ) |>
     mutate(
-      {{last_col}} := replace_na(.data[[last_col]], "VALUE")
+      {{last_col}} := replace_na(.data[[last_col]], "SPEC")
     ) |>
-    pivot_wider(names_from = {{last_col}}, values_from = "value")
+    pivot_wider(names_from = {{last_col}}, values_from = "value") |>
+    mutate(
+      VALUE = as.numeric(.data$VALUE)
+    )
 
   metadata
 

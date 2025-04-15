@@ -54,13 +54,13 @@ oneobs_81x <- function(
   metadata <- read_yaml(text = one_obs[-data_loc])
 
   table_meta <- enframe(metadata) |> # make a df out of the list
-  # each element of the list is now a column
-  pivot_wider(names_from = "name", values_from = "value") |>
-  unnest(names(metadata))
+    # each element of the list is now a column
+    pivot_wider(names_from = "name", values_from = "value") |>
+    unnest(names(metadata))
 
 
   one_obs_tbl <- bind_cols(table_meta, obs_data) |>
-  nest(data = names(obs_data))
+    nest(data = names(obs_data))
 
   one_obs_tbl
 }

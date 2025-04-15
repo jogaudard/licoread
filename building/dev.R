@@ -15,7 +15,7 @@ devtools::run_examples()
 devtools::test()
 
 
-usethis::use_package("stringr")
+usethis::use_package("")
 
 devtools::check()
 
@@ -30,3 +30,5 @@ usethis::use_pkgdown_github_pages()
 
 usethis::use_readme_rmd()
 devtools::build_readme()
+
+rcompendium::add_lifecycle_badge(lifecycle = "experimental", quiet = FALSE)
