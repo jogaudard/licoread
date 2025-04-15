@@ -1,7 +1,17 @@
 #' reads Li-COR files in a given location
+#' @param location location of the files
+#' @param file_type type of file (82z or 81x). If "auto" (default), the
+#' function will try to detect it by itself.
+#' @param file_type_list list of file types
+#' @param data_file name of the file with raw data
+#' @param meta_file name of the file with meta data
+#' @param regex_file regex expression matching the name of the 82z file. Here
+#' in case the user has a different than the default and for easier updates.
 #' @importFrom purrr map list_rbind
 #' @importFrom stringr str_match
 #' @importFrom stats na.omit
+#' @export
+#' @example 
 
 licoread <- function(
     location,

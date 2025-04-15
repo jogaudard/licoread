@@ -1,11 +1,13 @@
 #' finds out the file type for licoread
+#' @param file_list list of files found in the location
+#' @return a single character string indicating the file type
 #' @importFrom stringr str_extract
 #' @importFrom dplyr distinct
 
 licoread_auto <- function(
-    list
+    file_list
 ) {
-    extension <- str_extract(list, "(?<=[.])\\w*$") |>
+    extension <- str_extract(file_list, "(?<=[.])\\w*$") |>
     unique()
 
         if (length(extension) > 1) {

@@ -13,6 +13,21 @@ licoread(
   regex_file = "(\\\\w*-)*\\\\w*(?=([.]82z$))"
 )
 }
+\arguments{
+\item{location}{location of the files}
+
+\item{file_type}{type of file (82z or 81x). If "auto" (default), the
+function will try to detect it by itself.}
+
+\item{file_type_list}{list of file types}
+
+\item{data_file}{name of the file with raw data}
+
+\item{meta_file}{name of the file with meta data}
+
+\item{regex_file}{regex expression matching the name of the 82z file. Here
+in case the user has a different than the default and for easier updates.}
+}
 \description{
 reads Li-COR files in a given location
 }

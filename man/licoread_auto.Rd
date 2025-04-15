@@ -4,7 +4,13 @@
 \alias{licoread_auto}
 \title{finds out the file type for licoread}
 \usage{
-licoread_auto(list)
+licoread_auto(file_list)
+}
+\arguments{
+\item{file_list}{list of files found in the location}
+}
+\value{
+a single character string indicating the file type
 }
 \description{
 finds out the file type for licoread
