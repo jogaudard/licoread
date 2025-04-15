@@ -13,7 +13,8 @@ read_82z <- function(
   regex_file = "(\\w*-)*\\w*(?=([.]82z$))"
 ) {
   list <- list.files(
-    path, pattern = "*.82z$",
+    path,
+    pattern = "*.82z$",
     full.names = TRUE,
     recursive = TRUE
   )

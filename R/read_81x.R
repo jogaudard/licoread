@@ -1,41 +1,33 @@
-#' reads 81x licor files
-#' @description reads a .81x file with several measurements
-#' @param file filepath the the 81x file to read
+#' reading several 81x files in a folder
+#' @description reads several .81x files with several measurements
+#' @param location location of the files
 #' @return a nested tibble with the meta data from each measurements as row and
 #' the raw data nested
-#' @importFrom readr read_lines_raw read_lines
-#' @importFrom purrr map2
-#' @importFrom dplyr bind_rows
-#' @export
-#' @examples
-#' path <- system.file("extdata", package = "licoread")
-#' file <- paste(path, "10-28-2011.81x", sep = "/")
-#' read_81x(file)
+#' @importFrom purrr map list_rbind
 
 read_81x <- function(
-  file
+  location
 ) {
-  # use readlines to create a list
+  list <- list.files(
+    location,
+    pattern = "*.81x$",
+    full.names = TRUE,
+    recursive = TRUE
+  )
 
-  raw_lines <- read_lines_raw(file)
-  # use the empty line as a slicer
-  length <- lengths(raw_lines)
-  zero_lines <- which(length == 0)
+  list <- list |>
+    map(\(x) {
+      read_81x_onefile(
+        file = x
+      )
+    },
+    .progress = list(
+      type = "iterator",
+      format = "Importing files {cli::pb_bar} {cli::pb_percent}",
+      clear = TRUE
+    ))
 
-  all_obs <- read_lines(file)
-
-  start_vec <- c(1, (zero_lines[-length(zero_lines)]))
-  end_vec <- zero_lines
-
-  output <- map2(
-    start_vec,
-    end_vec,
-    oneobs_81x,
-    all_obs,
-    file,
-    .progress = TRUE
-  ) |>
-    bind_rows(.id = "id")
+  output <- list_rbind(list)
 
   output
 }
