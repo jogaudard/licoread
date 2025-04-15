@@ -15,7 +15,7 @@ devtools::run_examples()
 devtools::test()
 
 
-usethis::use_package("tidyr")
+usethis::use_package("stringr")
 
 devtools::check()
 
