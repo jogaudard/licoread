@@ -3,6 +3,8 @@
 #' @param filename name of the 82z archive
 #' @param data_file name of the file with raw data
 #' @param meta_file name of the file with meta data
+#' @param regex_file regex expression matching the name of the 82z file. Here
+#' in case the user has a different than the default and for easier updates.
 #' @importFrom rlang .data
 #' @importFrom dplyr filter mutate case_when select bind_cols left_join
 #' @importFrom tidyr unite pivot_wider pivot_longer nest

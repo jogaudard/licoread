@@ -106,3 +106,12 @@ test <- read_82z(
 )
 str(test, max.level = 2)
 attributes(test_oneobs)
+
+# try the subfolder thingy
+debug(read_82z)
+
+subfolders_reading <- read_82z(
+        path = "tests/testthat/sub_82z/"
+    )
+
+subfolders_reading

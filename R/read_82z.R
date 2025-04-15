@@ -8,7 +8,11 @@ read_82z <- function(
     meta_file = "metadata.json",
     regex_file = "(\\w*-)*\\w*(?=([.]82z$))"
 ) {
-  list <- list.files(path, pattern = "*.82z$", full.names = TRUE)
+  list <- list.files(
+    path, pattern = "*.82z$",
+    full.names = TRUE,
+    recursive = TRUE
+    )
 
   list <- list |>
     map(\(x) {
