@@ -99,6 +99,9 @@ test_oneobs <- oneobs_82z(
   regex_file = "(\\w*-)*\\w*(?=([.]82z$))"
   )
 
+str(test_oneobs, max.level = 2)
+test_oneobs$METADATA_VERTICAL
+
 debug(read_82z)
 
 test <- read_82z(
