@@ -12,14 +12,14 @@ read_82z <- function(
   meta_file = "metadata.json",
   regex_file = "(\\w*-)*\\w*(?=([.]82z$))"
 ) {
-  list <- list.files(
+  file_list <- list.files(
     path,
     pattern = "*.82z$",
     full.names = TRUE,
     recursive = TRUE
   )
 
-  list <- list |>
+  file_list <- file_list |>
     map(\(x) {
       oneobs_82z(
         filepath = x,
@@ -34,7 +34,7 @@ read_82z <- function(
       clear = TRUE
     ))
 
-  output <- list_rbind(list)
+  output <- list_rbind(file_list)
 
   output
 }
