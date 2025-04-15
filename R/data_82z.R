@@ -11,17 +11,17 @@ data_82z <- function(
     data_file,
     data_name,
     gases,
-    filename){
+    filename) {
 
+  data_data <- unz(filepath, data_file) |>
+    read_csv(
+      skip = 3,
+      col_names = data_name,
+      show_col_types = FALSE,
+      progress = FALSE
+    )
 
-
-
-# need to read units somewhere
-
-data_data <- unz(filepath, data_file) |>
-    read_csv(skip = 3, col_names = data_name, show_col_types = FALSE, progress = FALSE)
-
-data_long <- data_data |>
+  data_long <- data_data |>
     pivot_longer(all_of(gases), names_to = "gas", values_to = "conc") |>
     nest(.by = !c("gas", "conc"), .key = "gas_conc") |>
     mutate(
@@ -29,6 +29,6 @@ data_long <- data_data |>
     ) |>
     nest(.by = "fluxid")
 
+  data_long
 
-data_long
 }

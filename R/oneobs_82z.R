@@ -8,19 +8,16 @@
 #' @importFrom rlang .data
 #' @importFrom dplyr filter mutate case_when select bind_cols left_join
 #' @importFrom tidyr unite pivot_wider pivot_longer nest
+#' @importFrom stringr str_extract
 
 oneobs_82z <- function(
-  # path,
-  # filename,
   filepath,
   data_file,
   meta_file,
   regex_file
 ) {
 
-    filename <- str_extract(filepath, regex_file)
-  # filepath <- paste0(path, filename)
-  # extract filename from filepath and work with filepath in the input (easire with dir_ls)
+  filename <- str_extract(filepath, regex_file)
 
   metadata <- metadata_82z(
     filepath = filepath,
@@ -83,16 +80,14 @@ oneobs_82z <- function(
     data_file = data_file,
     data_name = data_name,
     filename = filename
-    )
+  )
 
   data <- data_data |>
     left_join(data_units, by = "fluxid")
-  
+
 
   oneobs_data <- bind_cols(data, meta_df)
 
   oneobs_data
-
-
 
 }

@@ -10,41 +10,43 @@
 
 
 metadata_82z <- function(
-    filepath,
-    meta_file
+  filepath,
+  meta_file
 ) {
-    metadata_raw <- unz(filepath, meta_file) |>
-        fromJSON()
 
-metadata_raw <- enframe(unlist(metadata_raw)) |>
-  mutate(
-    # add an id col to group per gas
-    group = str_extract(.data$name, "\\d$"),
-    name = str_remove(.data$name, "\\d$")
-  )
+  metadata_raw <- unz(filepath, meta_file) |>
+    fromJSON()
 
-# nb of column to separate
-rgx_split <- "\\."
-n_cols_max <-
-  metadata_raw |>
-  pull("name") |>
-  str_split(rgx_split) |>
-  map_dbl(~length(.)) |>
-  max()
+  metadata_raw <- enframe(unlist(metadata_raw)) |>
+    mutate(
+      # add an id col to group per gas
+      group = str_extract(.data$name, "\\d$"),
+      name = str_remove(.data$name, "\\d$")
+    )
 
-last_col <- paste0("name", n_cols_max)
+  # nb of column to separate
+  rgx_split <- "\\."
+  n_cols_max <-
+    metadata_raw |>
+    pull("name") |>
+    str_split(rgx_split) |>
+    map_dbl(~length(.)) |>
+    max()
 
-nms_sep <- paste0("name", 1:n_cols_max)
-metadata <- metadata_raw |>
-  separate_wider_delim("name",
-  delim = regex(rgx_split),
-   names = nms_sep, 
-   names_repair = "unique", too_few = "align_start") |>
-  mutate(
-    {{last_col}} := replace_na(.data[[last_col]], "VALUE")
-  ) |>
-   pivot_wider(names_from = {{last_col}}, values_from = "value")
+  last_col <- paste0("name", n_cols_max)
 
-metadata
+  nms_sep <- paste0("name", 1:n_cols_max)
+  metadata <- metadata_raw |>
+    separate_wider_delim("name",
+      delim = regex(rgx_split),
+      names = nms_sep,
+      names_repair = "unique", too_few = "align_start"
+    ) |>
+    mutate(
+      {{last_col}} := replace_na(.data[[last_col]], "VALUE")
+    ) |>
+    pivot_wider(names_from = {{last_col}}, values_from = "value")
+
+  metadata
 
 }

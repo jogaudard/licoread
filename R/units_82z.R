@@ -8,24 +8,25 @@
 #' @importFrom dplyr all_of mutate
 
 units_82z <- function(
-    filepath,
-    data_file,
-    data_name,
-    filename
+  filepath,
+  data_file,
+  data_name,
+  filename
 ) {
 
-
-data_units <- unz(filepath, data_file) |>
-    read_csv(skip = 2, n_max = 1, col_names = data_name, show_col_types = FALSE, progress = FALSE) |>
-    # pivot_longer(all_of(gases), names_to = "gas", values_to = "conc") |>
-    # pivot_longer(!gas, names_to = "variable", values_to = "unit") |>
-    # nest(.by = "gas", .key = "units")
-    # as.list()
-    mutate(
-        fluxid = filename
+  data_units <- unz(filepath, data_file) |>
+    read_csv(
+      skip = 2,
+      n_max = 1,
+      col_names = data_name,
+      show_col_types = FALSE,
+      progress = FALSE
     ) |>
-    pivot_longer(!fluxid, names_to = "variable", values_to = "unit") |>
+    mutate(
+      fluxid = filename
+    ) |>
+    pivot_longer(!"fluxid", names_to = "variable", values_to = "unit") |>
     nest(.by = "fluxid", .key = "units")
 
-data_units
+  data_units
 }
