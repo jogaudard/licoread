@@ -15,7 +15,7 @@ devtools::run_examples()
 devtools::test()
 
 
-usethis::use_package("stringr")
+usethis::use_package("")
 
 devtools::check()
 

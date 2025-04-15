@@ -29,15 +29,35 @@ oneobs_82z <- function(
   names_meta_df <- names_df(meta_df)
 
   meta_df <- meta_df |>
-    unite("name", all_of(names_meta_df)) |>
+    unite("name", all_of(names_meta_df))
+
+  # the following 4 blocks should be written as a function when I have time
+  meta_df_val <- meta_df |>
+    filter(!is.na(.data$VALUE)) |>
     mutate(
       name = case_when(
         is.na(.data$UNITS) ~ .data$name,
         !is.na(.data$UNITS) ~ paste(.data$name, .data$UNITS, sep = "_")
       )
     ) |>
-    select(!c("group", "UNITS")) |>
+    select(!c("group", "UNITS", "SPEC")) |>
     pivot_wider(names_from = "name", values_from = "VALUE")
+
+  meta_df_spec <- meta_df |>
+    filter(!is.na(.data$SPEC)) |>
+    mutate(
+      name = case_when(
+        is.na(.data$UNITS) ~ .data$name,
+        !is.na(.data$UNITS) ~ paste(.data$name, .data$UNITS, sep = "_")
+      )
+    ) |>
+    select(!c("group", "UNITS", "VALUE")) |>
+    pivot_wider(names_from = "name", values_from = "SPEC")
+
+  meta_df <- bind_cols(
+    meta_df_val,
+    meta_df_spec
+  )
 
 
   meta_cols <- metadata |>
@@ -46,18 +66,40 @@ oneobs_82z <- function(
   names_meta_cols <- names_df(meta_cols)
 
   meta_cols <- meta_cols |>
-    unite("name", all_of(names_meta_cols)) |>
+    unite("name", all_of(names_meta_cols))
+
+  meta_cols_val <- meta_cols |>
+    filter(!is.na(.data$VALUE)) |>
     mutate(
       name = case_when(
         is.na(.data$UNITS) ~ .data$name,
         !is.na(.data$UNITS) ~ paste(.data$name, .data$UNITS, sep = "_")
       )
     ) |>
-    select(!"UNITS") |>
-    pivot_wider(names_from = "name", values_from = "VALUE") |>
+    select(!c("UNITS", "SPEC")) |>
+    pivot_wider(names_from = "name", values_from = "VALUE")
+
+  meta_cols_spec <- meta_cols |>
+    filter(!is.na(.data$SPEC)) |>
+    mutate(
+      name = case_when(
+        is.na(.data$UNITS) ~ .data$name,
+        !is.na(.data$UNITS) ~ paste(.data$name, .data$UNITS, sep = "_")
+      )
+    ) |>
+    select(!c("UNITS", "VALUE")) |>
+    pivot_wider(names_from = "name", values_from = "SPEC")
+
+  meta_cols <- left_join(
+    meta_cols_val,
+    meta_cols_spec,
+    by = "group"
+  ) |>
     mutate(
       group = paste(.data$FLUX_GAS_SOURCE, .data$FLUX_GAS, sep = "_")
     )
+
+
 
   gases <- meta_cols$group
 
