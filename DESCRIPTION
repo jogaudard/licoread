@@ -24,5 +24,4 @@ Imports:
     yaml
 LazyData: true
 URL: https://jogaudard.github.io/licoread/
-VignetteBuilder: knitr
 BugReports: https://github.com/jogaudard/licoread/issues
