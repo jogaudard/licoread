@@ -26,7 +26,7 @@ oneobs_81x <- function(
 
 
   # location of data row are where as.numeric did not produce NA
-  data_loc <- which(!is.na(as.numeric(first_el)))
+  data_loc <- which(!is.na(suppressWarnings(as.numeric(first_el))))
 
   # row with col names  is just before the first numeric row
   col_names_loc <- min(data_loc) - 1
@@ -40,7 +40,14 @@ oneobs_81x <- function(
 
   # read tsv is slower, but much safer than re using the one_obs list
   # (in case there are empty cells)
-  obs_data <- read_tsv(file, skip = line_skip, n_max = line_max)
+  # we suppress the warning because the last column tends to be empty,
+  # which throws parsing issues
+  obs_data <- suppressWarnings(read_tsv(
+    file,
+    skip = line_skip,
+    n_max = line_max,
+    show_col_types = FALSE
+  ))
 
   # read meta data
 
@@ -48,7 +55,7 @@ oneobs_81x <- function(
 
   table_meta <- enframe(metadata) |> # make a df out of the list
   # each element of the list is now a column
-  pivot_wider(names_from = .data$name, values_from = .data$value) |>
+  pivot_wider(names_from = "name", values_from = "value") |>
   unnest(names(metadata))
 
 

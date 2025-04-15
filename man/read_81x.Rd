@@ -16,3 +16,8 @@ the raw data nested
 \description{
 reads a .81x file with several measurements
 }
+\examples{
+path <- system.file("extdata", package = "licoread")
+file <- paste(path, "10-28-2011.81x", sep = "/")
+read_81x(file)
+}

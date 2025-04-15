@@ -1,7 +1,7 @@
 ^licoread\.Rproj$
 ^\.Rproj\.user$
 building
-raw_files
+local_stuff
 ^LICENSE\.md$
 ^\.github$
 ^_pkgdown\.yml$
