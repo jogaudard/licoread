@@ -84,5 +84,7 @@ licoread <- function(
 
   output <- list_rbind(obs_list)
 
+  attr(output, "file_type") <- file_type
+
   output
 }
