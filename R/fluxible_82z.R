@@ -3,7 +3,7 @@
 #' @param focus_gas gas to select
 #' @return an unnested df with only the selected gas
 #' @importFrom tidyr unnest
-#' @importFrom dplyr distinct pull
+#' @importFrom dplyr distinct pull rename
 #' @importFrom rlang .data
 
 fluxible_82z <- function(
@@ -22,7 +22,13 @@ fluxible_82z <- function(
     focus_gas <- match.arg(focus_gas, gases)
 
     output <- output |>
-        filter(.data$gas == focus_gas)
+        filter(.data$gas == focus_gas) |>
+        rename(
+            focus_gas = "conc"
+        ) |>
+        select(!"gas")
+
+
     
     output
     

@@ -38,5 +38,7 @@ licoread_to_fluxible <- function(
 
     # need to rename datetime and fluxid column
 
+    # rearrange cols order to have the useful stuff first
+
     output
 }
