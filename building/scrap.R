@@ -1,5 +1,7 @@
 debug(licoread_auto)
 debug(licoread)
+debug(oneobs_81x)
+debug(read_81x_onefile)
 
 licoread("local_stuff/20240725_sample_data_all_gases/")
 gas_df_81x <- licoread("tests/testthat/mixed_files", file_type = "81x")

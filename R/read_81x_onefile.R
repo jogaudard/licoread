@@ -30,7 +30,7 @@ read_81x_onefile <- function(
     file,
     .progress = TRUE
   ) |>
-    bind_rows(.id = "id")
+    bind_rows()
 
   output
 }

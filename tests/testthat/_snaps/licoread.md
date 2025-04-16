@@ -1937,24 +1937,24 @@
     Code
       licoread(location = test_path("mixed_files"), file_type = "81x")
     Output
-      # A tibble: 25 x 50
-         id    `LI-8100`        `File Name` `Instrument Name` `Serial Number` Software
-         <chr> <chr>            <chr>       <chr>             <chr>           <chr>   
-       1 1     "1b1\t      b2\~ 10-28-2011  81A-0107          81A-0107        4.0.0b  
-       2 2     "1c5\t      b2\~ 10-28-2011  81A-0107          81A-0107        4.0.0b  
-       3 3     "1c5\t      b2\~ 10-28-2011  81A-0107          81A-0107        4.0.0b  
-       4 4     "1c5\t      b2\~ 10-28-2011  81A-0107          81A-0107        4.0.0b  
-       5 5     "1c5\t      b2\~ 10-28-2011  81A-0107          81A-0107        4.0.0b  
-       6 6     "1c5\t      b2\~ 10-28-2011  81A-0107          81A-0107        4.0.0b  
-       7 7     "1c5\t      b2\~ 10-28-2011  81A-0107          81A-0107        4.0.0b  
-       8 8     "1c5\t      b2\~ 10-28-2011  81A-0107          81A-0107        4.0.0b  
-       9 9     "1c5\t      b2\~ 10-28-2011  81A-0107          81A-0107        4.0.0b  
-      10 10    "1c6\t      b2\~ 10-28-2011  81A-0107          81A-0107        4.0.0b  
+      # A tibble: 25 x 49
+         `LI-8100`     `File Name` `Instrument Name` `Serial Number` Software Comments
+         <chr>         <chr>       <chr>             <chr>           <chr>    <lgl>   
+       1 "1b1\t      ~ 10-28-2011  81A-0107          81A-0107        4.0.0b   NA      
+       2 "1c5\t      ~ 10-28-2011  81A-0107          81A-0107        4.0.0b   NA      
+       3 "1c5\t      ~ 10-28-2011  81A-0107          81A-0107        4.0.0b   NA      
+       4 "1c5\t      ~ 10-28-2011  81A-0107          81A-0107        4.0.0b   NA      
+       5 "1c5\t      ~ 10-28-2011  81A-0107          81A-0107        4.0.0b   NA      
+       6 "1c5\t      ~ 10-28-2011  81A-0107          81A-0107        4.0.0b   NA      
+       7 "1c5\t      ~ 10-28-2011  81A-0107          81A-0107        4.0.0b   NA      
+       8 "1c5\t      ~ 10-28-2011  81A-0107          81A-0107        4.0.0b   NA      
+       9 "1c5\t      ~ 10-28-2011  81A-0107          81A-0107        4.0.0b   NA      
+      10 "1c6\t      ~ 10-28-2011  81A-0107          81A-0107        4.0.0b   NA      
       # i 15 more rows
-      # i 44 more variables: Comments <lgl>, `Obs#` <int>, `Port#` <int>,
-      #   Label <chr>, `Observation Length` <chr>, `Pre-purge` <chr>,
-      #   `Post-purge` <chr>, `IRGA Averaging` <int>, Chamber <int>, TSource <chr>,
-      #   Flow8100 <int>, Virga <dbl>, Vext <dbl>, Vcham <dbl>, Offset <dbl>,
-      #   Area <dbl>, Vtotal <dbl>, `V4 Info` <chr>, `T4 Info` <chr>,
-      #   Labels_01 <int>, CrvFitStatus <chr>, Exp_Flux <dbl>, Exp_FluxCV <dbl>, ...
+      # i 43 more variables: `Obs#` <int>, `Port#` <int>, Label <chr>,
+      #   `Observation Length` <chr>, `Pre-purge` <chr>, `Post-purge` <chr>,
+      #   `IRGA Averaging` <int>, Chamber <int>, TSource <chr>, Flow8100 <int>,
+      #   Virga <dbl>, Vext <dbl>, Vcham <dbl>, Offset <dbl>, Area <dbl>,
+      #   Vtotal <dbl>, `V4 Info` <chr>, `T4 Info` <chr>, Labels_01 <int>,
+      #   CrvFitStatus <chr>, Exp_Flux <dbl>, Exp_FluxCV <dbl>, ...
 
