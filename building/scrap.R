@@ -12,3 +12,10 @@ debug(fluxible_82z)
 ch4_dry <- fluxible_82z(gas_df_82z, "LI-7810_CH4_DRY")
 View(ch4_dry)
 
+debug(licoread_to_fluxible)
+licoread_to_fluxible(
+    gas_df_82z,
+    "LI-7810_CH4_DRY",
+    datetime_col = c("LI-8250_DATE", "LI-8250_TIME")
+)
+

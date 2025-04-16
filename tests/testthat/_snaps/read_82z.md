@@ -5,7 +5,7 @@
       data_file = "data.csv", meta_file = "metadata.json", regex_file = "(\\w*-)*\\w*(?=([.]82z$))"))
     Output
       tibble [1 x 38] (S3: tbl_df/tbl/data.frame)
-       $ fluxid                                 : chr "82m-0109-20240725000057"
+       $ f_fluxid                               : chr "82m-0109-20240725000057"
        $ data                                   :List of 1
         ..$ : tibble [131 x 85] (S3: tbl_df/tbl/data.frame)
         .. ..$ LI-8250_DATE                  : num [1:131] 20240725 20240725 20240725 20240725 20240725 ...

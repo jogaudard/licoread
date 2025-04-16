@@ -8,13 +8,15 @@
 #' @param file_type_list list of file types
 #' @return an unnested df with only the selected gas
 #' @export
-# #' @importFrom 
+#' @importFrom dplyr rename all_of mutate select everything
+#' @importFrom lubridate ymd_hms
 # #' @examples 
 
 
 licoread_to_fluxible <- function(
     df,
     focus_gas,
+    datetime_col,
     file_type = "auto",
   file_type_list = c(
     "82z",
@@ -36,9 +38,39 @@ licoread_to_fluxible <- function(
         )
     }
 
-    # need to rename datetime and fluxid column
+    # need to rename datetime and f_fluxid column
+    if (length(datetime_col) == 1) {
+        output <- rename(
+            f_datetime = all_of("datetime_col")
+        ) |>
+        mutate(
+            f_datetime = ymd_hms(f_datetime)
+        )
+        
+    }
+
+    if (length(datetime_col) == 2) {
+
+        f_date <- datetime_col[1]
+        f_time <- datetime_col[2]
+
+        output <- output |>
+            rename(
+            f_date = f_date,
+            f_time = f_time
+        ) |>
+        mutate(
+            f_datetime = ymd_hms(paste(f_date, f_time))
+        ) |>
+        select(!c("f_date", "f_time"))
+    }
+    
+    # flux_fitting also needs f_start and f_end
 
     # rearrange cols order to have the useful stuff first
+
+    # output <- output |>
+    #     select("f_f_fluxid", "f_datetime", focus_gas, "f_start", "f_end", everything())
 
     output
 }

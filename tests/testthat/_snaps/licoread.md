@@ -4,7 +4,7 @@
       str(licoread(test_path("test82z/")), digits.d = 4, width = 100, strict.width = "cut")
     Output
       tibble [7 x 44] (S3: tbl_df/tbl/data.frame)
-       $ fluxid                                 : chr [1:7] "82m-0109-20240725000057" "82m-0109-2024072"..
+       $ f_fluxid                               : chr [1:7] "82m-0109-20240725000057" "82m-0109-2024072"..
        $ data                                   :List of 7
         ..$ : tibble [131 x 85] (S3: tbl_df/tbl/data.frame)
         .. ..$ LI-8250_DATE                  : num [1:131] 20240725 20240725 20240725 20240725 20240725 ..
@@ -1917,7 +1917,7 @@
       licoread(location = test_path("mixed_files"), file_type = "82z")
     Output
       # A tibble: 5 x 44
-        fluxid            data     units    `CHAMBER_AREA_cm+2` CHAMBER_COLLAR_HEIGH~1
+        f_fluxid          data     units    `CHAMBER_AREA_cm+2` CHAMBER_COLLAR_HEIGH~1
         <chr>             <list>   <list>                 <dbl>                  <dbl>
       1 82m-0109-2024072~ <tibble> <tibble>                318.                      5
       2 82m-0109-2024072~ <tibble> <tibble>                318.                      5

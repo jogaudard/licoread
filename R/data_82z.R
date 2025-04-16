@@ -28,9 +28,9 @@ data_82z <- function(
     pivot_longer(all_of(gases), names_to = "gas", values_to = "conc") |>
     nest(.by = !c("gas", "conc"), .key = "gas_conc") |>
     mutate(
-      fluxid = filename
+      f_fluxid = filename
     ) |>
-    nest(.by = "fluxid")
+    nest(.by = "f_fluxid")
 
   data_long
 

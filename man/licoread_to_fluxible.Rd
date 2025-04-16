@@ -7,6 +7,7 @@
 licoread_to_fluxible(
   df,
   focus_gas,
+  datetime_col,
   file_type = "auto",
   file_type_list = c("82z", "81x", "auto")
 )
