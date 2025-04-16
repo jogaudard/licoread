@@ -6,7 +6,8 @@
 
 
 licoread_to_fluxible <- function(
-    df
+    df,
+    file_type = c()
 ) {
     bla
 }
