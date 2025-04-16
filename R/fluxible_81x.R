@@ -6,5 +6,7 @@ fluxible_81x <- function(
     df,
     focus_gas
 ) {
-    output
+    output <- df |>
+        unnest("data")
+
 }

@@ -29,14 +29,14 @@ oneobs_81x <- function(
   data_loc <- which(!is.na(suppressWarnings(as.numeric(first_el))))
 
   # row with col names  is just before the first numeric row
-  col_names_loc <- min(data_loc) - 1
-  data_loc <- append(data_loc, col_names_loc, 0)
+  # col_names_loc <- min(data_loc) - 1
+  # data_loc <- append(data_loc, col_names_loc, 0)
 
   # read data
   # we want to skip everything before the colnames
-  line_skip <- min(data_loc) - 2 + start
+  line_skip <- min(data_loc) - 3 + start
   # skipping everything after the last row of data
-  line_max <- max(data_loc) - line_skip - 1
+  line_max <- max(data_loc) - min(data_loc) + 1
 
   # read tsv is slower, but much safer than re using the one_obs list
   # (in case there are empty cells)
