@@ -22,11 +22,11 @@ fluxible_82z <- function(
     focus_gas <- match.arg(focus_gas, gases)
 
     output <- output |>
-        filter(.data$gas == focus_gas) |>
-        rename(
-            focus_gas = "conc"
-        ) |>
-        select(!"gas")
+        filter(.data$gas == focus_gas)# |>
+        # rename(
+        #     focus_gas = "conc"
+        # ) |>
+        # select(!"gas")
 
 
     

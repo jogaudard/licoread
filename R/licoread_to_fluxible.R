@@ -10,6 +10,7 @@
 #' @export
 #' @importFrom dplyr rename all_of mutate select everything
 #' @importFrom lubridate ymd_hms
+#' @importFrom rlang .data
 # #' @examples 
 
 
@@ -67,10 +68,17 @@ licoread_to_fluxible <- function(
     
     # flux_fitting also needs f_start and f_end
 
+    output <- output |>
+        mutate(
+            .by = .data$f_fluxid,
+            f_start = min(.data$f_datetime),
+            f_end = max(.data$f_datetime)
+        )
+
     # rearrange cols order to have the useful stuff first
 
-    # output <- output |>
-    #     select("f_f_fluxid", "f_datetime", focus_gas, "f_start", "f_end", everything())
+    output <- output |>
+        select("f_fluxid", "f_datetime", "conc", "f_start", "f_end", everything())
 
     output
 }
