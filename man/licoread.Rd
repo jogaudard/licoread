@@ -7,7 +7,7 @@
 licoread(
   location,
   file_type = "auto",
-  file_type_list = c("82z", "81x"),
+  file_type_list = c("82z", "81x", "auto"),
   data_file = "data.csv",
   meta_file = "metadata.json",
   regex_file = "(\\\\w*-)*\\\\w*(?=([.]82z$))"
