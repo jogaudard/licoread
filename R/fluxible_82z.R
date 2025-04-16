@@ -12,7 +12,7 @@ fluxible_82z <- function(
 ) {
     output <- df |>
         unnest("data") |>
-        unnest("gas_conc")
+        unnest("gas_f_conc")
     
     gases <- output |>
         select("gas") |>
@@ -24,7 +24,7 @@ fluxible_82z <- function(
     output <- output |>
         filter(.data$gas == focus_gas)# |>
         # rename(
-        #     focus_gas = "conc"
+        #     focus_gas = "f_conc"
         # ) |>
         # select(!"gas")
 

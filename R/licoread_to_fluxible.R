@@ -57,8 +57,8 @@ licoread_to_fluxible <- function(
 
         output <- output |>
             rename(
-            f_date = f_date,
-            f_time = f_time
+            f_date = all_of(f_date),
+            f_time = all_of(f_time)
         ) |>
         mutate(
             f_datetime = ymd_hms(paste(f_date, f_time))
@@ -70,7 +70,7 @@ licoread_to_fluxible <- function(
 
     output <- output |>
         mutate(
-            .by = .data$f_fluxid,
+            .by = "f_fluxid",
             f_start = min(.data$f_datetime),
             f_end = max(.data$f_datetime)
         )
@@ -78,7 +78,7 @@ licoread_to_fluxible <- function(
     # rearrange cols order to have the useful stuff first
 
     output <- output |>
-        select("f_fluxid", "f_datetime", "conc", "f_start", "f_end", everything())
+        select("f_fluxid", "f_datetime", "f_conc", "f_start", "f_end", everything())
 
     output
 }

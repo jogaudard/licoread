@@ -92,304 +92,304 @@
         .. ..$ LI-7825_PHASE_ERROR           : num [1:131] -15.25 43.25 26.25 17.75 -1.75 ...
         .. ..$ LI-7825_LASER_T_SHIFT         : num [1:131] -0.116 -0.116 -0.116 -0.116 -0.116 ...
         .. ..$ LI-7825_INPUT_VOLTAGE         : num [1:131] 24.2 24.2 24.2 24.2 24.2 ...
-        .. ..$ gas_conc                      :List of 131
+        .. ..$ gas_f_conc                    :List of 131
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3002 831 357 834
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3002 831 357 834
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3002 839 357 837
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3002 839 357 837
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3002 845 357 837
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3002 845 357 837
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3002 850 357 837
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3002 850 357 837
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3002 852 357 845
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3002 852 357 845
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3003 855 357 851
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3003 855 357 851
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3003 859 357 855
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3003 859 357 855
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3003 864 357 858
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3003 864 357 858
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3004 867 358 861
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3004 867 358 861
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3005 868 357 865
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3005 868 357 865
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3005 871 357 871
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3005 871 357 871
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3004 873 357 874
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3004 873 357 874
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3004 875 357 876
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3004 875 357 876
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3004 877 357 877
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3004 877 357 877
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3003 881 358 879
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3003 881 358 879
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3003 882 357 882
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3003 882 357 882
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3003 883 358 884
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3003 883 358 884
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3003 882 358 888
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3003 882 358 888
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3002 884 357 889
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3002 884 357 889
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 888 358 890
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 888 358 890
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3000 893 357 889
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3000 893 357 889
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2999 896 357 890
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2999 896 357 890
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2998 899 357 895
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2998 899 357 895
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2997 902 358 899
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2997 902 358 899
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2998 905 357 904
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2998 905 357 904
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2998 907 358 905
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2998 907 358 905
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2998 909 357 908
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2998 909 357 908
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2998 912 358 911
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2998 912 358 911
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2998 914 357 913
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2998 914 357 913
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2998 916 358 916
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2998 916 358 916
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2998 917 357 918
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2998 917 357 918
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2998 918 358 920
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2998 918 358 920
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2997 921 357 922
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2997 921 357 922
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2997 927 358 923
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2997 927 358 923
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2997 932 358 924
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2997 932 358 924
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2998 936 358 928
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2998 936 358 928
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2998 940 358 933
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2998 940 358 933
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2998 942 358 938
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2998 942 358 938
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2998 943 358 942
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2998 943 358 942
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2998 940 358 945
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2998 940 358 945
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2998 938 358 947
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2998 938 358 947
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2998 936 358 948
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2998 936 358 948
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2998 932 358 947
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2998 932 358 947
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2997 929 358 945
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2997 929 358 945
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2997 925 358 943
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2997 925 358 943
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2997 922 358 940
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2997 922 358 940
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2997 921 358 936
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2997 921 358 936
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2998 920 357 932
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2998 920 357 932
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2998 920 358 929
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2998 920 358 929
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2998 921 357 928
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2998 921 357 928
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2998 921 358 927
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2998 921 358 927
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2998 921 358 928
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2998 921 358 928
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2999 920 358 928
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2999 920 358 928
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2999 919 358 928
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2999 919 358 928
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2999 918 357 928
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2999 918 357 928
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2999 918 358 927
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2999 918 358 927
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2999 917 358 926
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2999 917 358 926
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 2999 917 358 925
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 2999 917 358 925
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3000 917 358 924
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3000 917 358 924
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3000 917 358 924
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3000 917 358 924
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3000 917 358 924
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3000 917 358 924
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3000 918 358 924
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3000 918 358 924
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 919 358 924
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 919 358 924
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 920 358 924
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 920 358 924
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 921 357 925
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 921 357 925
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 922 358 926
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 922 358 926
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 923 357 927
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 923 357 927
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 924 358 928
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 924 358 928
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 925 357 929
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 925 357 929
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 925 358 930
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 925 358 930
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 926 357 930
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 926 357 930
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 927 358 931
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 927 358 931
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 928 358 932
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 928 358 932
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 928 358 933
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 928 358 933
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 929 358 934
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 929 358 934
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 931 358 934
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 931 358 934
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 932 358 935
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 932 358 935
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 933 357 936
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 933 357 936
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 934 358 937
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 934 358 937
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 936 358 938
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 936 358 938
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 936 358 940
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 936 358 940
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 938 358 941
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 938 358 941
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 939 358 942
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 939 358 942
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3002 944 358 943
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3002 944 358 943
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 945 358 944
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 945 358 944
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 943 358 945
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 943 358 945
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3000 944 358 950
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3000 944 358 950
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 944 358 953
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 944 358 953
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3001 950 358 950
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3001 950 358 950
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3002 972 358 951
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3002 972 358 951
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3003 995 358 951
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3003 995 358 951
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3003 999 358 953
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3003 999 358 953
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3002 994 358 974
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3002 994 358 974
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3002 983 358 999
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3002 983 358 999
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3002 975 358 1005
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3002 975 358 1005
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3002 994 358 1000
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3002 994 358 1000
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3003 1009 358 992
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3003 1009 358 992
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3002 999 358 980
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3002 999 358 980
         .. .. ..$ : tibble [4 x 2] (S3: tbl_df/tbl/data.frame)
-        .. .. .. ..$ gas : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
-        .. .. .. ..$ conc: num [1:4] 3002 998 358 996
+        .. .. .. ..$ gas   : chr [1:4] "LI-7810_CH4_DRY" "LI-7810_CO2_DRY" "LI-7820_N2O_DRY" "LI-7825_CO2"
+        .. .. .. ..$ f_conc: num [1:4] 3002 998 358 996
         .. .. .. [list output truncated]
        $ units                                  :List of 1
         ..$ : tibble [88 x 2] (S3: tbl_df/tbl/data.frame)
