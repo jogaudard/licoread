@@ -39,10 +39,18 @@ licoread_to_fluxible <- function(
         )
     }
 
+    if (file_type == "81x") {
+        output <- fluxible_81x(
+            df,
+            focus_gas = focus_gas
+        )
+    }
+
     # need to rename datetime and f_fluxid column
     if (length(datetime_col) == 1) {
-        output <- rename(
-            f_datetime = all_of("datetime_col")
+        output <- output |>
+        rename(
+            f_datetime = all_of(datetime_col)
         ) |>
         mutate(
             f_datetime = ymd_hms(f_datetime)

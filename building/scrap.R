@@ -19,7 +19,8 @@ View(test[[11]])
 str(gas_df_82z)
 
 debug(fluxible_81x)
-fluxible_81x(gas_df_81x, "CO2")
+fluxible_81x(gas_df_81x, "CO2") |>
+    View()
 
 debug(fluxible_82z)
 ch4_dry <- fluxible_82z(gas_df_82z, "LI-7810_CH4_DRY")
@@ -32,3 +33,8 @@ licoread_to_fluxible(
     datetime_col = c("LI-8250_DATE", "LI-8250_TIME")
 )
 
+licoread_to_fluxible(
+    gas_df_81x,
+    "CO2",
+    datetime_col = "Date"
+)
