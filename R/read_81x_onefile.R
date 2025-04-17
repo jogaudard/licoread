@@ -22,10 +22,7 @@ read_81x_onefile <- function(
   start <- c(1, (zero_lines[-length(zero_lines)]))
   end <- zero_lines
 
-  lines_df <- tibble(
-    start,
-    end
-  )
+
 
   output <- purrr::map2(
     start,

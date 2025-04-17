@@ -7,6 +7,11 @@ fluxible_81x <- function(
     focus_gas
 ) {
     output <- df |>
-        unnest("data")
+        unnest("data") |>
+        rename(
+            f_conc = all_of(focus_gas)
+        )
+    
+    output
 
 }

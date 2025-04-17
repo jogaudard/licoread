@@ -14,12 +14,12 @@ test <- gas_df_81x |>
 
 nrow(test[[2]])
 
-View(test[[2]])
+View(test[[11]])
 
 str(gas_df_82z)
 
 debug(fluxible_81x)
-fluxible_81x(gas_df_81x)
+fluxible_81x(gas_df_81x, "CO2")
 
 debug(fluxible_82z)
 ch4_dry <- fluxible_82z(gas_df_82z, "LI-7810_CH4_DRY")
