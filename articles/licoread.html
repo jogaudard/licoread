@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">licoread</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,9 +73,29 @@
 <span><span class="co"># if your location containes more than one file type, you will have to specify</span></span>
 <span><span class="co"># which files licoread should read</span></span>
 <span><span class="va">path</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/mixed_files"</span>, package <span class="op">=</span> <span class="st">"licoread"</span><span class="op">)</span></span>
-<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/licoread.html">licoread</a></span><span class="op">(</span><span class="va">path</span>, file_type <span class="op">=</span> <span class="st">"82z"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">gas_df_82z</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/licoread.html">licoread</a></span><span class="op">(</span><span class="va">path</span>, file_type <span class="op">=</span> <span class="st">"82z"</span><span class="op">)</span></span></code></pre></div>
 </div>
-  </main>
+<div class="section level2">
+<h2 id="making-a-fluxible-friendly-dataframe">Making a fluxible-friendly dataframe<a class="anchor" aria-label="anchor" href="#making-a-fluxible-friendly-dataframe"></a>
+</h2>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">path_81x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/81x"</span>, package <span class="op">=</span> <span class="st">"licoread"</span><span class="op">)</span></span>
+<span><span class="va">gas_df_81x</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/licoread.html">licoread</a></span><span class="op">(</span><span class="va">path_81x</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">co2_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/licoread_to_fluxible.html">licoread_to_fluxible</a></span><span class="op">(</span></span>
+<span>  <span class="va">gas_df_81x</span>,</span>
+<span>  <span class="st">"CO2"</span>,</span>
+<span>  datetime_col <span class="op">=</span> <span class="st">"Date"</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">ch4_dry</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/licoread_to_fluxible.html">licoread_to_fluxible</a></span><span class="op">(</span></span>
+<span>  <span class="va">gas_df_82z</span>,</span>
+<span>  <span class="st">"LI-7810_CH4_DRY"</span>,</span>
+<span>  datetime_col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"LI-8250_DATE"</span>, <span class="st">"LI-8250_TIME"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+</div>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
