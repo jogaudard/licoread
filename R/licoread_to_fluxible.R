@@ -15,7 +15,14 @@
 #' @importFrom dplyr rename all_of mutate select everything
 #' @importFrom lubridate ymd_hms
 #' @importFrom rlang .data
-# #' @examples
+#' @examples
+#' path_81x <- system.file("extdata/81x", package = "licoread")
+#' gas_df_81x <- licoread(path_81x)
+#' licoread_to_fluxible(gas_df_81x, "CO2", datetime_col = "Date")
+#' path_82z <- system.file("extdata/82z", package = "licoread")
+#' gas_df_82z <- licoread(path_82z)
+#' licoread_to_fluxible(gas_df_82z, "LI-7810_CH4_DRY",
+#' datetime_col = c("LI-8250_DATE", "LI-8250_TIME"))
 
 
 licoread_to_fluxible <- function(
