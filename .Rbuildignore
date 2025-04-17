@@ -10,3 +10,4 @@ local_stuff
 ^README\.Rmd$
 ^doc$
 ^Meta$
+^cran-comments\.md$
