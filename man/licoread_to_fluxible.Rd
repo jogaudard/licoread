@@ -8,6 +8,7 @@ licoread_to_fluxible(
   df,
   focus_gas,
   datetime_col,
+  id_cols = c("File Name", "Obs#"),
   file_type = "auto",
   file_type_list = c("82z", "81x", "auto")
 )
@@ -16,6 +17,12 @@ licoread_to_fluxible(
 \item{df}{input dataframe from \link[licoread:licoread]{licoread}}
 
 \item{focus_gas}{gas to select}
+
+\item{datetime_col}{column containing datetime information if date and time
+are in two different columns, provide a character vector of the form
+c("time", "date")}
+
+\item{id_cols}{columns to identify unique fluxes}
 
 \item{file_type}{type of file (82z or 81x). If "auto" (default), the
 function will try to detect it by itself.}

@@ -37,4 +37,5 @@ licoread_to_fluxible(
     gas_df_81x,
     "CO2",
     datetime_col = "Date"
-)
+) |>
+View()
