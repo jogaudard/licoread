@@ -24,10 +24,10 @@ units_82z <- function(
       progress = FALSE
     ) |>
     mutate(
-      fluxid = filename
+      f_fluxid = filename
     ) |>
-    pivot_longer(!"fluxid", names_to = "variable", values_to = "unit") |>
-    nest(.by = "fluxid", .key = "units")
+    pivot_longer(!"f_fluxid", names_to = "variable", values_to = "unit") |>
+    nest(.by = "f_fluxid", .key = "units")
 
   data_units
 }

@@ -4,7 +4,7 @@
 #' @return a nested tibble with the meta data from each measurements as row and
 #' the raw data nested
 #' @importFrom readr read_lines_raw read_lines
-#' @importFrom purrr map2
+#' @importFrom purrr map
 #' @importFrom dplyr bind_rows
 
 read_81x_onefile <- function(
@@ -19,18 +19,21 @@ read_81x_onefile <- function(
 
   all_obs <- read_lines(file)
 
-  start_vec <- c(1, (zero_lines[-length(zero_lines)]))
-  end_vec <- zero_lines
+  start <- c(1, (zero_lines[-length(zero_lines)]))
+  end <- zero_lines
 
-  output <- map2(
-    start_vec,
-    end_vec,
+
+
+  output <- purrr::map2(
+    start,
+    end,
     oneobs_81x,
     all_obs,
     file,
     .progress = TRUE
   ) |>
-    bind_rows(.id = "id")
+    bind_rows()
+
 
   output
 }

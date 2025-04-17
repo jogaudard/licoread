@@ -24,7 +24,8 @@ licoread <- function(
   file_type = "auto",
   file_type_list = c(
     "82z",
-    "81x"
+    "81x",
+    "auto"
   ),
   data_file = "data.csv",
   meta_file = "metadata.json",
@@ -36,12 +37,13 @@ licoread <- function(
     recursive = TRUE
   )
 
+  file_type <- match.arg(file_type, file_type_list)
+
   if (file_type == "auto") {
 
     file_type <- licoread_auto(file_list)
   }
 
-  file_type <- match.arg(file_type, file_type_list)
 
   if (file_type == "82z") {
 
@@ -83,6 +85,8 @@ licoread <- function(
   }
 
   output <- list_rbind(obs_list)
+
+  attr(output, "file_type") <- file_type
 
   output
 }
