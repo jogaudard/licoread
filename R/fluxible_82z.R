@@ -17,7 +17,7 @@ fluxible_82z <- function(
   gases <- output |>
     select("gas") |>
     distinct() |>
-    pull(gas)
+    pull(.data$gas)
 
   focus_gas <- match.arg(focus_gas, gases)
 
