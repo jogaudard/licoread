@@ -12,6 +12,8 @@ str(gas_df_81x)
 test <- gas_df_81x |>
     pull(data)
 
+nrow(test[[2]])
+
 View(test[[2]])
 
 str(gas_df_82z)
