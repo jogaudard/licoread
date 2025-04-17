@@ -9,6 +9,7 @@
 #' @importFrom tibble enframe
 #' @importFrom tidyr pivot_wider unnest nest
 #' @importFrom dplyr bind_cols mutate across everything
+#' @importFrom stringr str_detect
 #' @return a df with 1 row with the meta data of the measurement
 #' and raw data nested
 
