@@ -52,3 +52,21 @@ test_that("licoread can read several files in subfolders", {
       str(digits.d = 4, width = 100, strict.width = "cut")
   )
 })
+
+test_that("licoread 81x works correctly in data nest", {
+
+  gas_df_81x <- licoread(
+    test_path("mixed_files"), file_type = "81x"
+  )
+
+  test_df <- gas_df_81x |>
+    dplyr::pull("data")
+
+  nrow_test <- nrow(test_df[[2]])
+
+
+  expect_equal(
+    nrow_test,
+    108
+  )
+})

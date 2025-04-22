@@ -126,7 +126,7 @@ oneobs_82z <- function(
   )
 
   data <- data_data |>
-    left_join(data_units, by = "fluxid")
+    left_join(data_units, by = "f_fluxid")
 
 
   oneobs_data <- bind_cols(data, meta_df)

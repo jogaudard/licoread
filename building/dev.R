@@ -34,4 +34,4 @@ devtools::build_readme()
 usethis::use_vignette("licoread")
 devtools::build_vignettes()
 
-rcompendium::add_lifecycle_badge(lifecycle = "experimental", quiet = FALSE)
+rcompendium::add_lifecycle_badge(lifecycle = "stable", quiet = FALSE)

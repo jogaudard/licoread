@@ -1,3 +1,7 @@
+# licoread 0.1.0
+
+* `licoread_to_fluxible`: creates a df that is easy to use with the fluxible R package.
+
 # licoread 0.0.2
 
 * `licoread`: function to read all Li-COR raw files in 82z or 81x format in a given location and return a tibble without losing any data or units.
