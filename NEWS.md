@@ -1,6 +1,8 @@
 # licoread 0.1.0
 
-* `licoread_to_fluxible`: issue with leading zeros in time columns fixed
+* `licoread_to_fluxible`:
+  * issue with leading zeros in time columns fixed
+  * `datetime_col`: arguments in documentation was in wrong order. Should be `c("date", "time")`
 
 # licoread 0.1.0
 

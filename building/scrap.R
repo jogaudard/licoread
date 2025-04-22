@@ -39,3 +39,10 @@ licoread_to_fluxible(
     datetime_col = "Date"
 ) |>
 View()
+
+gas_df_82z <- licoread(test_path("lead_zero_prob"), file_type = "82z")
+  co2_df <- licoread_to_fluxible(
+    gas_df_82z,
+    "LI-870_CO2_DRY",
+    datetime_col = c("LI-8250_DATE", "LI-8250_TIME")
+  )

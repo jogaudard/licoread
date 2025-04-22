@@ -8,7 +8,7 @@
 #' @param file_type_list list of file types
 #' @param datetime_col column containing datetime information if date and time
 #' are in two different columns, provide a character vector of the form
-#' c("time", "date")
+#' c("date", "time")
 #' @param id_cols columns to identify unique fluxes
 #' @return an unnested df with only the selected gas
 #' @export
