@@ -20,7 +20,7 @@ licoread_to_fluxible(
 
 \item{datetime_col}{column containing datetime information if date and time
 are in two different columns, provide a character vector of the form
-c("time", "date")}
+c("date", "time")}
 
 \item{id_cols}{columns to identify unique fluxes}
 
