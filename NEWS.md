@@ -1,5 +1,9 @@
 # licoread 0.1.0
 
+* `licoread_to_fluxible`: issue with leading zeros in time columns fixed
+
+# licoread 0.1.0
+
 * `licoread_to_fluxible`: creates a df that is easy to use with the fluxible R package.
 
 # licoread 0.0.2

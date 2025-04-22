@@ -1,7 +1,7 @@
 Package: licoread
 Title: Reads Raw Files from Li-COR Gas Analyzers
-Version: 0.1.0
-Date: 2025-04-17
+Version: 0.1.1
+Date: 2025-04-22
 Authors@R: 
     person(given = "Joseph", family = "Gaudard", , "joseph.gaudard@pm.me", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-6989-7624"))
 Description: The licoread package reads raw files from Li-COR gas analyzers and creates an R object that can directly be used with the 'fluxible' R package.
