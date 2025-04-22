@@ -11,14 +11,12 @@
 #' @importFrom lubridate hms ymd
 
 data_82z <- function(
-    filepath,
-    data_file,
-    data_name,
-    gases,
-    filename
-    # time_col,
-    # date_col
-    ) {
+  filepath,
+  data_file,
+  data_name,
+  gases,
+  filename
+) {
 
   data_data <- unz(filepath, data_file) |>
     read_csv(
@@ -27,21 +25,6 @@ data_82z <- function(
       show_col_types = FALSE,
       progress = FALSE
     )
-  # problem with leading zeros being read as characters instead of doubles
-  # data_data <- data_data |>
-  #   mutate(
-  #     across(everything(), ~ if (all(is.na(.))) as.character(.) else .),
-  #     across(everything(), ~ if (all(
-  #       str_detect(., "^\\d*[.]\\d*$|^\\d*$"), na.rm = TRUE
-  #     )) as.numeric(.) else .)
-  #   )
-
-  # data_data <- data_data |>
-  #   mutate(
-  #     {{time_col}} := hms({{time_col}}),
-  #     {{date_col}} := ymd({{date_col}})
-  #   )
-
   data_long <- data_data |>
     pivot_longer(all_of(gases), names_to = "gas", values_to = "f_conc") |>
     nest(.by = !c("gas", "f_conc"), .key = "gas_f_conc") |>
