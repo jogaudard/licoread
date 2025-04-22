@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">licoread</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +46,8 @@
 <span>  file_type_list <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"82z"</span>, <span class="st">"81x"</span>, <span class="st">"auto"</span><span class="op">)</span>,</span>
 <span>  data_file <span class="op">=</span> <span class="st">"data.csv"</span>,</span>
 <span>  meta_file <span class="op">=</span> <span class="st">"metadata.json"</span>,</span>
-<span>  regex_file <span class="op">=</span> <span class="st">"(\\w*-)*\\w*(?=([.]82z$))"</span></span>
+<span>  regex_file <span class="op">=</span> <span class="st">"(\\w*-)*\\w*(?=([.]82z$))"</span>,</span>
+<span>  glimpse <span class="op">=</span> <span class="cn">FALSE</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -78,6 +79,12 @@ function will try to detect it by itself.</p></dd>
 <dt id="arg-regex-file">regex_file<a class="anchor" aria-label="anchor" href="#arg-regex-file"></a></dt>
 <dd><p>regex expression matching the name of the 82z file. Here
 in case the user has a different than the default and for easier updates.</p></dd>
+
+
+<dt id="arg-glimpse">glimpse<a class="anchor" aria-label="anchor" href="#arg-glimpse"></a></dt>
+<dd><p>if <code>TRUE</code>, a random selection of five files will be imported.
+This allows for testing the setup before importing a potentially large list
+of files which will take time and be difficult to handle.</p></dd>
 
 </dl></div>
     <div class="section level2">
