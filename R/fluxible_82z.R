@@ -10,9 +10,15 @@ fluxible_82z <- function(
   df,
   focus_gas
 ) {
+
+  message("Unnesting the data...")
+
   output <- df |>
     unnest("data") |>
     unnest("gas_f_conc")
+
+
+  message("Selecting the focus gas...")
 
   gases <- output |>
     select("gas") |>

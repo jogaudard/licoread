@@ -8,7 +8,7 @@
 [![R-CMD-check](https://github.com/jogaudard/licoread/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jogaudard/licoread/actions/workflows/R-CMD-check.yaml)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/licoread)](https://CRAN.R-project.org/package=licoread)
-[![LifeCycle](https://img.shields.io/badge/lifecycle-stable-green)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![LifeCycle](https://img.shields.io/badge/lifecycle-experimental-orange)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
 The licoread R package provides an easy way to import raw files from
@@ -23,5 +23,5 @@ You can install the development version of licoread from
 
 ``` r
 # install.packages("pak")
-pak::pak("jogaudard/read_licor")
+pak::pak("jogaudard/licoread")
 ```

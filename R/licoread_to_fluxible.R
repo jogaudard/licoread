@@ -8,13 +8,14 @@
 #' @param file_type_list list of file types
 #' @param datetime_col column containing datetime information if date and time
 #' are in two different columns, provide a character vector of the form
-#' c("time", "date")
+#' c("date", "time")
 #' @param id_cols columns to identify unique fluxes
 #' @return an unnested df with only the selected gas
 #' @export
 #' @importFrom dplyr rename all_of mutate select everything
 #' @importFrom lubridate ymd_hms
 #' @importFrom rlang .data
+#' @importFrom stringr str_pad
 #' @examples
 #' path_81x <- system.file("extdata/81x", package = "licoread")
 #' gas_df_81x <- licoread(path_81x)
@@ -45,6 +46,9 @@ licoread_to_fluxible <- function(
   }
 
   if (file_type == "82z") {
+
+    message("File type is 82z.")
+
     output <- fluxible_82z(
       df,
       focus_gas = focus_gas
@@ -52,6 +56,9 @@ licoread_to_fluxible <- function(
   }
 
   if (file_type == "81x") {
+
+    message("File type is 81x.")
+
     output <- fluxible_81x(
       df,
       focus_gas = focus_gas,
@@ -61,6 +68,9 @@ licoread_to_fluxible <- function(
   }
 
   # need to rename datetime and f_fluxid column
+
+  message("Formatting datetime column...")
+
   if (length(datetime_col) == 1) {
     output <- output |>
       rename(
@@ -82,12 +92,20 @@ licoread_to_fluxible <- function(
         f_time = all_of(f_time)
       ) |>
       mutate(
+        f_time = str_pad(
+          .data$f_time,
+          6,
+          side = "left",
+          "0"
+        ),
         f_datetime = ymd_hms(paste(f_date, f_time))
       ) |>
       select(!c("f_date", "f_time"))
   }
 
   # flux_fitting also needs f_start and f_end
+
+  message("Looking for start and end of each measurement...")
 
   output <- output |>
     mutate(

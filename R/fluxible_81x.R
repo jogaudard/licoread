@@ -14,6 +14,9 @@ fluxible_81x <- function(
   id_cols,
   datetime_col
 ) {
+
+  message("Unnesting the data...")
+
   output <- df |>
     unnest("data") |>
     rename(
