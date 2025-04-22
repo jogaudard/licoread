@@ -7,6 +7,9 @@
 #' @param meta_file name of the file with meta data
 #' @param regex_file regex expression matching the name of the 82z file. Here
 #' in case the user has a different than the default and for easier updates.
+#' @param glimpse if `TRUE`, a random selection of five files will be imported.
+#' This allows for testing the setup before importing a potentially large list
+#' of files which will take time and be difficult to handle.
 #' @importFrom purrr map list_rbind
 #' @importFrom stringr str_match
 #' @importFrom stats na.omit
@@ -29,7 +32,8 @@ licoread <- function(
   ),
   data_file = "data.csv",
   meta_file = "metadata.json",
-  regex_file = "(\\w*-)*\\w*(?=([.]82z$))"
+  regex_file = "(\\w*-)*\\w*(?=([.]82z$))",
+  glimpse = FALSE
 ) {
   file_list <- list.files(
     location,
@@ -44,6 +48,23 @@ licoread <- function(
     file_type <- licoread_auto(file_list)
   }
 
+  if (glimpse) {
+    message("Glimpse = TRUE, only five files will be imported")
+
+    if (length(file_list) < 5) {
+      stop("You need at least five files to use glimpse.")
+    }
+
+    sample_list <- sample(seq_along(file_list), 5)
+
+
+    file_list <- file_list[sample_list]
+
+    list <- str_extract(file_list, "(\\w*-)*\\w*[.]\\w*$") |>
+      paste(collapse = "\n")
+
+    message(cat(paste0("Files selected:", "\n", list)))
+  }
 
   if (file_type == "82z") {
 
