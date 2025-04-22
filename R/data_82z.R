@@ -25,6 +25,15 @@ data_82z <- function(
       show_col_types = FALSE,
       progress = FALSE
     )
+  # cols with leading 0s get treated as character instead of double
+  data_data <- data_data |>
+    mutate(
+      across(everything(), ~ if (all(is.na(.))) as.character(.) else .),
+      across(everything(), ~ if (all(
+        str_detect(., "^\\d*[.]\\d*$|^\\d*$"), na.rm = TRUE
+      )) as.numeric(.) else .)
+    )
+
   data_long <- data_data |>
     pivot_longer(all_of(gases), names_to = "gas", values_to = "f_conc") |>
     nest(.by = !c("gas", "f_conc"), .key = "gas_f_conc") |>
