@@ -4,7 +4,7 @@
 \alias{oneobs_82z}
 \title{to read one measurement from the 82z archive}
 \usage{
-oneobs_82z(filepath, data_file, meta_file, regex_file)
+oneobs_82z(filepath, data_file, meta_file, regex_file, time_col, date_col)
 }
 \arguments{
 \item{filepath}{path to the 82z archive}

@@ -15,6 +15,7 @@
 #' @importFrom dplyr rename all_of mutate select everything
 #' @importFrom lubridate ymd_hms
 #' @importFrom rlang .data
+#' @importFrom stringr str_pad
 #' @examples
 #' path_81x <- system.file("extdata/81x", package = "licoread")
 #' gas_df_81x <- licoread(path_81x)
@@ -82,6 +83,12 @@ licoread_to_fluxible <- function(
         f_time = all_of(f_time)
       ) |>
       mutate(
+        f_time = str_pad(
+          .data$f_time,
+          6,
+          side = "left",
+          "0"
+        ),
         f_datetime = ymd_hms(paste(f_date, f_time))
       ) |>
       select(!c("f_date", "f_time"))

@@ -15,7 +15,9 @@ oneobs_82z <- function(
   filepath,
   data_file,
   meta_file,
-  regex_file
+  regex_file,
+  time_col,
+  date_col
 ) {
 
   filename <- str_extract(filepath, regex_file)
@@ -116,6 +118,8 @@ oneobs_82z <- function(
     data_name = data_name,
     gases = gases,
     filename = filename
+    # time_col = {{time_col}},
+    # date_col = {{date_col}}
   )
 
   data_units <- units_82z(
