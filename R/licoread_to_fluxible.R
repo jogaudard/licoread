@@ -46,6 +46,9 @@ licoread_to_fluxible <- function(
   }
 
   if (file_type == "82z") {
+
+    message("File type is 82z.")
+
     output <- fluxible_82z(
       df,
       focus_gas = focus_gas
@@ -53,6 +56,9 @@ licoread_to_fluxible <- function(
   }
 
   if (file_type == "81x") {
+
+    message("File type is 81x.")
+
     output <- fluxible_81x(
       df,
       focus_gas = focus_gas,
@@ -62,6 +68,9 @@ licoread_to_fluxible <- function(
   }
 
   # need to rename datetime and f_fluxid column
+
+  message("Formatting datetime column...")
+
   if (length(datetime_col) == 1) {
     output <- output |>
       rename(
@@ -95,6 +104,8 @@ licoread_to_fluxible <- function(
   }
 
   # flux_fitting also needs f_start and f_end
+
+  message("Looking for start and end of each measurement...")
 
   output <- output |>
     mutate(
