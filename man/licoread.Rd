@@ -10,7 +10,8 @@ licoread(
   file_type_list = c("82z", "81x", "auto"),
   data_file = "data.csv",
   meta_file = "metadata.json",
-  regex_file = "(\\\\w*-)*\\\\w*(?=([.]82z$))"
+  regex_file = "(\\\\w*-)*\\\\w*(?=([.]82z$))",
+  glimpse = FALSE
 )
 }
 \arguments{
@@ -27,6 +28,10 @@ function will try to detect it by itself.}
 
 \item{regex_file}{regex expression matching the name of the 82z file. Here
 in case the user has a different than the default and for easier updates.}
+
+\item{glimpse}{if \code{TRUE}, a random selection of five files will be imported.
+This allows for testing the setup before importing a potentially large list
+of files which will take time and be difficult to handle.}
 }
 \value{
 a tibble (nested or not depending on raw data) containing all the
