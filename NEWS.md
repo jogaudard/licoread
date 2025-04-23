@@ -3,7 +3,7 @@
 * `licoread_to_fluxible`:
   * issue with leading zeros in time columns fixed
   * `datetime_col`: arguments in documentation was in wrong order. Should be `c("date", "time")`
-* `licoread`: option `glimpse = TRUE` will randomly select five files from the target folder. This allows for testing without importing a long list of files (which takes time).
+* `licoread`: option `glimpse = n` will randomly select n files from the target folder. This allows for testing without importing a long list of files (which takes time).
 
 # licoread 0.1.0
 
