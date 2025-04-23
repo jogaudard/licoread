@@ -82,7 +82,7 @@ in case the user has a different than the default and for easier updates.</p></d
 
 
 <dt id="arg-glimpse">glimpse<a class="anchor" aria-label="anchor" href="#arg-glimpse"></a></dt>
-<dd><p>if <code>TRUE</code>, a random selection of five files will be imported.
+<dd><p><code>glimpse = n</code> randomly selects n files to be imported.
 This allows for testing the setup before importing a potentially large list
 of files which will take time and be difficult to handle.</p></dd>
 
@@ -95,36 +95,13 @@ data from the raw files present at the location provided</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">path_81x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/81x"</span>, package <span class="op">=</span> <span class="st">"licoread"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">licoread</span><span class="op">(</span><span class="va">path_81x</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 25 × 49</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    `LI-8100`     `File Name` `Instrument Name` `Serial Number` Software Comments</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> <span style="color: #949494;">"</span>1b1\t      … 10-28-2011  81A-0107          81A-0107        4.0.0b   <span style="color: #BB0000;">NA</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> <span style="color: #949494;">"</span>1c5\t      … 10-28-2011  81A-0107          81A-0107        4.0.0b   <span style="color: #BB0000;">NA</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> <span style="color: #949494;">"</span>1c5\t      … 10-28-2011  81A-0107          81A-0107        4.0.0b   <span style="color: #BB0000;">NA</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> <span style="color: #949494;">"</span>1c5\t      … 10-28-2011  81A-0107          81A-0107        4.0.0b   <span style="color: #BB0000;">NA</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> <span style="color: #949494;">"</span>1c5\t      … 10-28-2011  81A-0107          81A-0107        4.0.0b   <span style="color: #BB0000;">NA</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> <span style="color: #949494;">"</span>1c5\t      … 10-28-2011  81A-0107          81A-0107        4.0.0b   <span style="color: #BB0000;">NA</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> <span style="color: #949494;">"</span>1c5\t      … 10-28-2011  81A-0107          81A-0107        4.0.0b   <span style="color: #BB0000;">NA</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> <span style="color: #949494;">"</span>1c5\t      … 10-28-2011  81A-0107          81A-0107        4.0.0b   <span style="color: #BB0000;">NA</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> <span style="color: #949494;">"</span>1c5\t      … 10-28-2011  81A-0107          81A-0107        4.0.0b   <span style="color: #BB0000;">NA</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> <span style="color: #949494;">"</span>1c6\t      … 10-28-2011  81A-0107          81A-0107        4.0.0b   <span style="color: #BB0000;">NA</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 15 more rows</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 43 more variables: `Obs#` &lt;int&gt;, `Port#` &lt;int&gt;, Label &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   `Observation Length` &lt;chr&gt;, `Pre-purge` &lt;chr&gt;, `Post-purge` &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   `IRGA Averaging` &lt;int&gt;, Chamber &lt;int&gt;, TSource &lt;chr&gt;, Flow8100 &lt;int&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   Virga &lt;dbl&gt;, Vext &lt;dbl&gt;, Vcham &lt;dbl&gt;, Offset &lt;dbl&gt;, Area &lt;dbl&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   Vtotal &lt;dbl&gt;, `V4 Info` &lt;chr&gt;, `T4 Info` &lt;chr&gt;, Labels_01 &lt;int&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   CrvFitStatus &lt;chr&gt;, Exp_Flux &lt;dbl&gt;, Exp_FluxCV &lt;dbl&gt;, …</span></span>
-<span class="r-in"><span><span class="va">path_82z</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/82z"</span>, package <span class="op">=</span> <span class="st">"licoread"</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">path_82z</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/82z"</span>, package <span class="op">=</span> <span class="st">"licoread"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">licoread</span><span class="op">(</span><span class="va">path_82z</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 3 × 38</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 2 × 38</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   f_fluxid          data     units    `CHAMBER_AREA_cm+2` CHAMBER_COLLAR_HEIGH…¹</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>                  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> 82m-0109-2024072… <span style="color: #949494;">&lt;tibble&gt;</span> <span style="color: #949494;">&lt;tibble&gt;</span>                318.                      5</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> 82m-0109-2024072… <span style="color: #949494;">&lt;tibble&gt;</span> <span style="color: #949494;">&lt;tibble&gt;</span>                318.                      5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> 82m-0109-2024072… <span style="color: #949494;">&lt;tibble&gt;</span> <span style="color: #949494;">&lt;tibble&gt;</span>                318.                      5</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ abbreviated name: ¹​CHAMBER_COLLAR_HEIGHT_cm</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 33 more variables: CHAMBER_LATITUDE_degrees &lt;dbl&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   CHAMBER_LONGITUDE_degrees &lt;dbl&gt;, CHAMBER_PARK_POSITION_degrees &lt;dbl&gt;,</span></span>
