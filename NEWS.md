@@ -1,4 +1,4 @@
-# licoread 0.1.0
+# licoread 0.1.1
 
 * `licoread_to_fluxible`:
   * issue with leading zeros in time columns fixed
