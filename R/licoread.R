@@ -17,8 +17,6 @@
 #' data from the raw files present at the location provided
 #' @export
 #' @examples
-#' path_81x <- system.file("extdata/81x", package = "licoread")
-#' licoread(path_81x)
 #' path_82z <- system.file("extdata/82z", package = "licoread")
 #' licoread(path_82z)
 
