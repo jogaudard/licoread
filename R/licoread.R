@@ -7,7 +7,7 @@
 #' @param meta_file name of the file with meta data
 #' @param regex_file regex expression matching the name of the 82z file. Here
 #' in case the user has a different than the default and for easier updates.
-#' @param glimpse if `TRUE`, a random selection of five files will be imported.
+#' @param glimpse `glimpse = n` randomly selects n files to be imported.
 #' This allows for testing the setup before importing a potentially large list
 #' of files which will take time and be difficult to handle.
 #' @importFrom purrr map list_rbind
@@ -48,14 +48,14 @@ licoread <- function(
     file_type <- licoread_auto(file_list)
   }
 
-  if (glimpse) {
-    message("Glimpse = TRUE, only five files will be imported")
+  if (is.numeric(glimpse)) {
+    message(paste0(glimpse, " files will be imported"))
 
-    if (length(file_list) < 5) {
-      stop("You need at least five files to use glimpse.")
+    if (length(file_list) < glimpse) {
+      stop("Number of files higher than glimpse size.")
     }
 
-    sample_list <- sample(seq_along(file_list), 5)
+    sample_list <- sample(seq_along(file_list), glimpse)
 
 
     file_list <- file_list[sample_list]
