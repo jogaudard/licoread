@@ -4,7 +4,7 @@ Version: 0.1.1
 Date: 2025-04-23
 Authors@R: 
     person(given = "Joseph", family = "Gaudard", , "joseph.gaudard@pm.me", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-6989-7624"))
-Description: The licoread package reads raw files from Li-COR gas analyzers and creates an R object that can directly be used with the 'fluxible' R package.
+Description: Reads raw files from Li-COR gas analyzers and produces a dataframe that can directly be used with 'fluxible' <https://cran.r-project.org/package=fluxible>.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
