@@ -47,4 +47,4 @@ gas_df_82z <- licoread(test_path("lead_zero_prob"), file_type = "82z")
     datetime_col = c("LI-8250_DATE", "LI-8250_TIME")
   )
 
-gas_df_82z <- licoread("tests/testthat/test82z", file_type = "82z", glimpse = 5)
+gas_df_82z <- licoread("tests/testthat/test82z", file_type = "82z", sample = 5)
