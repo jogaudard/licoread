@@ -1,9 +1,6 @@
 ## R CMD check results
 
-Duration: 1m 8.7s
+Duration: 1m 49.2s
 
-0 errors | 0 warnings | 1 note
+0 errors | 0 warnings | 0 note
 
-* This is a new release.
-* Fixed description
-* Removed list printing in licoread
