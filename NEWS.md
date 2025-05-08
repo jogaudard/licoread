@@ -1,3 +1,7 @@
+# licoread 0.2.0
+
+* `list_gases`: a function to list all the gases in the dataset
+
 # licoread 0.1.1
 
 * `licoread_to_fluxible`:

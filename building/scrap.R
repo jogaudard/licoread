@@ -48,3 +48,5 @@ gas_df_82z <- licoread(test_path("lead_zero_prob"), file_type = "82z")
   )
 
 gas_df_82z <- licoread("tests/testthat/test82z", file_type = "82z", sample = 5)
+
+list_gases(gas_df_81x) |> View()
