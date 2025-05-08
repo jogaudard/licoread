@@ -3,7 +3,7 @@ pkgdown: 2.1.2
 pkgdown_sha: ~
 articles:
   licoread: licoread.html
-last_built: 2025-05-08T16:21Z
+last_built: 2025-05-08T16:44Z
 urls:
   reference: https://jogaudard.github.io/licoread/reference
   article: https://jogaudard.github.io/licoread/articles
