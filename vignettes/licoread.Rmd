@@ -29,7 +29,7 @@ gas_df_82z <- licoread(path, file_type = "82z")
 ```
 
 # Making a fluxible-friendly dataframe
-```{r fluxible}
+```{r fluxible-81x}
 path_81x <- system.file("extdata/81x", package = "licoread")
 gas_df_81x <- licoread(path_81x)
 
@@ -38,6 +38,14 @@ co2_df <- licoread_to_fluxible(
   "CO2",
   datetime_col = "Date"
 )
+```
+
+With the 82z file type, the name of measured gases is not so intuitive.
+You can use the `list_gases()` function to list all the gases present in the dataset.
+
+```{r fluxible-82z}
+
+list_gases(gas_df_82z)
 
 ch4_dry <- licoread_to_fluxible(
   gas_df_82z,

@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# licoread
+# Licoread
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/jogaudard/licoread/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jogaudard/licoread/actions/workflows/R-CMD-check.yaml)
@@ -25,7 +25,13 @@ The licoread R package provides an easy way to import raw files from li-COR gas 
 
 ## Installation
 
-You can install the development version of licoread from [GitHub](https://github.com/) with:
+Licoread can be installed from CRAN:
+
+``` r
+install.packages("licoread")
+```
+
+Or you can install the development version from [GitHub](https://github.com/):
 
 ``` r
 # install.packages("pak")
