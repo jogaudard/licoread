@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# licoread
+# Licoread
 
 <!-- badges: start -->
 
@@ -18,8 +18,14 @@ package.
 
 ## Installation
 
-You can install the development version of licoread from
-[GitHub](https://github.com/) with:
+Licoread can be installed from CRAN:
+
+``` r
+install.packages("licoread")
+```
+
+Or you can install the development version from
+[GitHub](https://github.com/):
 
 ``` r
 # install.packages("pak")
