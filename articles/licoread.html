@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">licoread</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -111,6 +111,43 @@ all the gases present in the dataset.</p>
 <span><span class="co">#&gt; Formatting datetime column...</span></span>
 <span><span class="co">#&gt; Looking for start and end of each measurement...</span></span></code></pre></div>
 </div>
+<div class="section level2">
+<h2 id="importing-data-from-li7500-tent-setup">Importing data from LI7500 tent setup<a class="anchor" aria-label="anchor" href="#importing-data-from-li7500-tent-setup"></a>
+</h2>
+<p>The function <code><a href="../reference/import7500.html">licoread::import7500</a></code> is tailored to import
+data files from the LI7500 tent setup described in <span class="citation">@halbritterPlantTraitVegetation2024</span>. Note that
+if the default values of <code>plotinfo_names</code> follows the file
+naming convention <code>[location]_[date]_[time of day]_[trial]</code>.
+The function is recursive and will read all the files in the designated
+folder and subfolders. It is therefore necessary that the designated
+folder contains only files to import and were all recorded with the same
+setup.</p>
+<p>The default settings import files from before the update of the
+LI7500.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># this step is not needed if you know where your data are</span></span>
+<span><span class="va">path_co2fluxtent</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/co2fluxtent"</span>, package <span class="op">=</span> <span class="st">"licoread"</span><span class="op">)</span></span>
+<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/import7500.html">import7500</a></span><span class="op">(</span></span>
+<span>  <span class="va">path_co2fluxtent</span>,</span>
+<span>  plotinfo_names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"date"</span>, <span class="st">"location"</span>, <span class="st">"time_of_day"</span>, <span class="st">"trial"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<p>To read files created after the update of the LI7500, set
+<code>version = "post2023"</code>.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># this step is not needed if you know where your data are</span></span>
+<span><span class="va">path_pftc7</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/pftc7"</span>, package <span class="op">=</span> <span class="st">"licoread"</span><span class="op">)</span></span>
+<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/import7500.html">import7500</a></span><span class="op">(</span><span class="va">path_pftc7</span>, version <span class="op">=</span> <span class="st">"post2023"</span>, plotinfo <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+<p>In case a comment was written while creating the files (typically
+inserted on the line above the column names), set
+<code>comment = TRUE</code>.</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># this step is not needed if you know where your data are</span></span>
+<span><span class="va">path_pftc5</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/pftc5"</span>, package <span class="op">=</span> <span class="st">"licoread"</span><span class="op">)</span></span>
+<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/import7500.html">import7500</a></span><span class="op">(</span></span>
+<span>  <span class="va">path_pftc5</span>, comment <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  plotinfo_names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"site"</span>, <span class="st">"block"</span>, <span class="st">"date"</span>, <span class="st">"plot"</span>, <span class="st">"trial"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+</div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
 </div>
@@ -122,7 +159,7 @@ all the gases present in the dataset.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.2.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
 </div>
 
     </footer>
