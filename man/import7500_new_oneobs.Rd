@@ -4,14 +4,10 @@
 \alias{import7500_new_oneobs}
 \title{imports one file from li7500 (old)}
 \usage{
-import7500_new_oneobs(filepath, comment, skip)
+import7500_new_oneobs(filepath)
 }
 \arguments{
 \item{filepath}{path to the file}
-
-\item{comment}{do the raw files include a line with comments?}
-
-\item{skip}{nb of line to skip when reading the file}
 }
 \value{
 a df with the content of the file
