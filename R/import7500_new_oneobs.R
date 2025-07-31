@@ -51,7 +51,8 @@ import7500_new_oneobs <- function(filepath) {
       f_fluxid = basename(.data$f_fluxid), # removing folder names
       comment = comment_txt,
       f_start = min(.data$f_datetime),
-      f_end = max(.data$f_datetime)
+      f_end = max(.data$f_datetime),
+      pressure_atm = 0.009869233 * .data$`Pressure (kPa)`
     )
 
   oneobs_df
