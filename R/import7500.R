@@ -55,13 +55,13 @@ import7500 <- function(path,
 
   if (version == "till2023") {
     output <- list_files |>
-      map(import7500_old_oneobs) |>
+      map(import7500_old_oneobs, .progress = TRUE) |>
       list_rbind()
   }
 
   if (version == "post2023") {
     output <- list_files |>
-      map(import7500_new_oneobs) |>
+      map(import7500_new_oneobs, .progress = TRUE) |>
       list_rbind()
   }
 
