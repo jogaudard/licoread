@@ -6,31 +6,46 @@
 #' @importFrom stringr str_replace
 #' @importFrom lubridate parse_date_time round_date
 
-import7500_old_oneobs <- function(filepath) {
+import7500_old_oneobs <- function(filepath,
+                                  comment,
+                                  skip) {
 
-
+  if (isTRUE(comment)) {
+    skip <- 9
+  }
 
   data <- read_tsv(filepath,
-                   skip = 9,
+                   skip = skip,
                    locale = locale(encoding = "latin1"),
-                   id = "filename") |>
+                   id = "filename",
+                   show_col_types = FALSE,
+                   name_repair = "unique_quiet") |>
     select(!"...1")
 
   datetime_txt <- read_lines(filepath, n_max = 1) |>
     str_replace(" at ", " ") |>
     parse_date_time(orders = "b d Y H:M:S")
 
-  comment_txt <- read_lines(filepath,
-                        n_max = 1,
-                        skip = 8)
 
   oneobs_df <- data |>
     mutate(
       datetime = datetime_txt + .data$`Relative Time`,
-      datetime = round_date(datetime),
-      comment = comment_txt,
-      filename = basename(filename) # removing folder names
+      datetime = round_date(.data$datetime),
+      filename = basename(.data$filename) # removing folder names
     )
+
+  if (isTRUE(comment)) {
+    comment_txt <- read_lines(
+      filepath,
+      n_max = 1,
+      skip = (skip - 1)
+    )
+
+    oneobs_df <- data |>
+      mutate(
+        comment = comment_txt
+      )
+  }
 
   oneobs_df
 }

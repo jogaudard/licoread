@@ -4,7 +4,14 @@
 \alias{import7500}
 \title{imports data from li7500 setup}
 \usage{
-import7500(path, version = "till2023", plotinfo = TRUE)
+import7500(
+  path,
+  version = "till2023",
+  plotinfo = TRUE,
+  plotinfo_names = c("location", "date", "time_of_day", "trial"),
+  comment = FALSE,
+  skip = 8
+)
 }
 \description{
 imports data from li7500 setup

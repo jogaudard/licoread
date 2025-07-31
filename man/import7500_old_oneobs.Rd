@@ -4,7 +4,7 @@
 \alias{import7500_old_oneobs}
 \title{imports one file from li7500 (old)}
 \usage{
-import7500_old_oneobs(filepath)
+import7500_old_oneobs(filepath, comment, skip)
 }
 \arguments{
 \item{filepath}{path to the file}

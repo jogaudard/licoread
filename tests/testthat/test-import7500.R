@@ -1,0 +1,14 @@
+test_that("works with co2fluxtent test files", {
+  expect_snapshot(
+    import7500(
+      test_path("li7500/old/co2fluxtent"),
+      plotinfo_names = c(
+        "date",
+        "location",
+        "time_of_day",
+        "trial"
+      )
+    ) |>
+      str(digits.d = 4, width = 100, strict.width = "cut")
+  )
+})
