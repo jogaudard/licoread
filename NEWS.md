@@ -1,3 +1,7 @@
+# licoread 0.3.0
+
+* `import7500`: imports files from the LI7500 setup
+
 # licoread 0.2.0
 
 * `list_gases`: a function to list all the gases in the dataset
