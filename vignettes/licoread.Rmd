@@ -5,6 +5,8 @@ vignette: >
   %\VignetteIndexEntry{licoread}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+bibliography: biblio_phd_zot.bib
+csl: emerald-harvard.csl
 ---
 
 ```{r, include = FALSE}
