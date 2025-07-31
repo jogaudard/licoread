@@ -138,13 +138,13 @@ LI7500.</p>
 <span><span class="va">path_pftc7</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/pftc7"</span>, package <span class="op">=</span> <span class="st">"licoread"</span><span class="op">)</span></span>
 <span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/import7500.html">import7500</a></span><span class="op">(</span><span class="va">path_pftc7</span>, version <span class="op">=</span> <span class="st">"post2023"</span>, plotinfo <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <p>In case a comment was written while creating the files (typically
-inserted on the line above the column names), set
-<code>comment = TRUE</code>.</p>
+inserted on the line above the column names), it is automatically added
+in the column <code>comment</code>.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># this step is not needed if you know where your data are</span></span>
 <span><span class="va">path_pftc5</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/pftc5"</span>, package <span class="op">=</span> <span class="st">"licoread"</span><span class="op">)</span></span>
 <span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/import7500.html">import7500</a></span><span class="op">(</span></span>
-<span>  <span class="va">path_pftc5</span>, comment <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  <span class="va">path_pftc5</span>,</span>
 <span>  plotinfo_names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"site"</span>, <span class="st">"block"</span>, <span class="st">"date"</span>, <span class="st">"plot"</span>, <span class="st">"trial"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 </div>
