@@ -14,9 +14,6 @@
 #' @param plotinfo_names character vector of column names to use when seperating
 #' the plot info from the file name. Default is following the recommanded
 #' file naming convention `[location]_[date]_[time of day]_[trial]`.
-#' @param comment do the raw files include a line with comments?
-#' @param skip_old nb of lines to skip with the old version of the li7500
-#' @param skip_new nb of lines to skip with the updated version of the li7500
 #' @return a dataframe with all data present in the files to import. New
 #' datetime and filename columns contain respectively the datetime of
 #' measurements and their orginial filename. If `comment = TRUE`, a column
@@ -31,7 +28,7 @@
 #' import7500(path_pftc7, version = "post2023", plotinfo = FALSE)
 #'
 #' path_pftc5 <- system.file("extdata/pftc5", package = "licoread")
-#' import7500(path_pftc5, comment = TRUE,
+#' import7500(path_pftc5,
 #' plotinfo_names = c("site", "block", "date", "plot", "trial"))
 #'
 #' path_co2fluxtent <- system.file("extdata/co2fluxtent",
@@ -48,10 +45,7 @@ import7500 <- function(path,
                          "date",
                          "time_of_day",
                          "trial"
-                       ),
-                       comment = FALSE,
-                       skip_old = 8,
-                       skip_new = 3) {
+                       )) {
 
   list_files <- list.files(
     path,
@@ -61,16 +55,12 @@ import7500 <- function(path,
 
   if (version == "till2023") {
     output <- list_files |>
-      map_dfr(import7500_old_oneobs,
-              comment = comment,
-              skip = skip_old)
+      map_dfr(import7500_old_oneobs)
   }
 
   if (version == "post2023") {
     output <- list_files |>
-      map_dfr(import7500_new_oneobs,
-              comment = comment,
-              skip = skip_new)
+      map_dfr(import7500_new_oneobs)
   }
 
   if (isTRUE(plotinfo)) {

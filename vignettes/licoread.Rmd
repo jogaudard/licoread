@@ -78,12 +78,12 @@ path_pftc7 <- system.file("extdata/pftc7", package = "licoread")
 data <- import7500(path_pftc7, version = "post2023", plotinfo = FALSE)
 ```
 
-In case a comment was written while creating the files (typically inserted on the line above the column names), set `comment = TRUE`.
+In case a comment was written while creating the files (typically inserted on the line above the column names), it is automatically added in the column `comment`.
 ```{r li7500-pftc5}
 # this step is not needed if you know where your data are
 path_pftc5 <- system.file("extdata/pftc5", package = "licoread")
 data <- import7500(
-  path_pftc5, comment = TRUE,
+  path_pftc5,
   plotinfo_names = c("site", "block", "date", "plot", "trial")
 )
 ```

@@ -17,7 +17,6 @@ test_that("works with pftc5 test files", {
   expect_snapshot(
     import7500(
       test_path("pftc5/"),
-      comment = TRUE,
       plotinfo_names = c(
         "site",
         "block",

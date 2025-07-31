@@ -1,24 +1,42 @@
 #' imports one file from li7500 (old)
 #' @param filepath path to the file
-#' @param comment do the raw files include a line with comments?
-#' @param skip nb of line to skip when reading the file
 #' @return a df with the content of the file
 #' @importFrom readr read_tsv read_lines locale
 #' @importFrom dplyr select mutate
-#' @importFrom stringr str_remove_all
+#' @importFrom stringr str_remove_all str_trim
 #' @importFrom lubridate round_date as_datetime
 #' @importFrom rlang .data
 
-import7500_new_oneobs <- function(filepath,
-                                  comment,
-                                  skip) {
+import7500_new_oneobs <- function(filepath) {
 
-  if (isTRUE(comment)) {
-    skip <- skip + 1
+
+
+  raw_lines <- readLines(filepath, n = 11)
+
+  header_line_index <- which(str_detect(raw_lines, "^DATAH"))[1]
+
+  if (is.na(header_line_index)) {
+    stop("No line starting with `DATAH` found (headers).")
+  }
+
+  comment_txt <- NA_character_
+  if (header_line_index > 1) {
+    prev_line <- str_trim(raw_lines[header_line_index - 1])
+
+    # If the previous line does NOT match known metadata patterns,
+    # treat it as a comment
+    is_not_comment <- str_detect(prev_line, regex(
+      "^Model:|^SN:|^Timestamp:",
+      ignore_case = TRUE
+    ))
+
+    if (!is_not_comment && prev_line != "") {
+      comment_txt <- prev_line
+    }
   }
 
   data <- read_tsv(filepath,
-                   skip = skip,
+                   skip = header_line_index - 1,
                    locale = locale(encoding = "latin1"),
                    id = "filename",
                    show_col_types = FALSE,
@@ -29,21 +47,9 @@ import7500_new_oneobs <- function(filepath,
       Time = str_remove_all(.data$Time, ":\\d{3}$"),
       datetime = as_datetime(paste(.data$Date, .data$Time)),
       datetime = round_date(.data$datetime),
-      filename = basename(.data$filename) # removing folder names
+      filename = basename(.data$filename), # removing folder names
+      comment = comment_txt
     )
-
-  if (isTRUE(comment)) {
-    comment_txt <- read_lines(
-      filepath,
-      n_max = 1,
-      skip = (skip - 1)
-    )
-
-    oneobs_df <- oneobs_df |>
-      mutate(
-        comment = comment_txt
-      )
-  }
 
   oneobs_df
 }
