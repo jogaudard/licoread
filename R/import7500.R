@@ -27,14 +27,14 @@
 #' @importFrom stringr str_remove
 #' @importFrom rlang .data
 #' @examples
-#' path_pftc7 <- system.file("extdata/li7500/pftc7", package = "licoread")
+#' path_pftc7 <- system.file("extdata/pftc7", package = "licoread")
 #' import7500(path_pftc7, version = "post2023", plotinfo = FALSE)
 #'
-#' path_pftc5 <- system.file("extdata/li7500/pftc5", package = "licoread")
+#' path_pftc5 <- system.file("extdata/pftc5", package = "licoread")
 #' import7500(path_pftc5, comment = TRUE,
 #' plotinfo_names = c("site", "block", "date", "plot", "trial"))
 #'
-#' path_co2fluxtent <- system.file("extdata/li7500/co2fluxtent",
+#' path_co2fluxtent <- system.file("extdata/co2fluxtent",
 #' package = "licoread")
 #' import7500(path_co2fluxtent,
 #' plotinfo_names = c("date", "location", "time_of_day", "trial"))
