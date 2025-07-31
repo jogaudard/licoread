@@ -2,7 +2,7 @@
 #' @description 
 #' @param 
 #' 
-#' 
+#' @importFrom purrr map_dfr
 
 
 import7500 <- function(path,
@@ -16,7 +16,27 @@ list_files <- list.files(
 )
 
 if (version == "till2023") {
-    output <- import7500_old(list_files)
+    output <- list_files |>
+      map_dfr(import7500_old_oneobs)
 }
+
+if (version == "post2023") {
+    output <- list_files |>
+      map_dfr(import7500_new_oneobs)
+}
+
+if (isTRUE(plotinfo)) {
+    plot_info <- output |>
+      separate_wider_delim(filename,
+        delim = "_",
+        names = c(
+          "location",
+          "date",
+          "time_of_day",
+          "trial"
+        )
+      )
+}
+
 output
                        }

@@ -6,6 +6,12 @@
 \usage{
 import7500_old(list_files)
 }
+\arguments{
+\item{list_files}{list of files including path}
+}
+\value{
+a df with the content of all the files and file name as id
+}
 \description{
 imports old version of li7500 files
 }

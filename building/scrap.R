@@ -51,6 +51,7 @@ gas_df_82z <- licoread("tests/testthat/test82z", file_type = "82z", sample = 5)
 
 list_gases(gas_df_81x) |> View()
 
+debug(import7500)
 import7500("inst/extdata/li7500/old")
 
 read_lines()
@@ -68,3 +69,5 @@ datetime_txt |>
 
 debug(import7500_old_oneobs)
 import7500_old_oneobs(filename) |> View()
+
+
