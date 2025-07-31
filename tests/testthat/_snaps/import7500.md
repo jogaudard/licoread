@@ -30,8 +30,8 @@
 # works with pftc5 test files
 
     Code
-      str(import7500(test_path("pftc5/"), comment = TRUE, plotinfo_names = c("site",
-        "block", "date", "plot", "trial")), digits.d = 4, width = 100, strict.width = "cut")
+      str(import7500(test_path("pftc5/"), plotinfo_names = c("site", "block", "date",
+        "plot", "trial")), digits.d = 4, width = 100, strict.width = "cut")
     Output
       tibble [287 x 22] (S3: tbl_df/tbl/data.frame)
        $ filename       : chr [1:287] "ACJ_B_15mar2018_plot1_a.txt" "ACJ_B_15mar2018_plot1_a.txt" "ACJ_"..
@@ -63,7 +63,7 @@
       str(import7500(test_path("pftc7/"), version = "post2023", plotinfo = FALSE),
       digits.d = 4, width = 100, strict.width = "cut")
     Output
-      tibble [330 x 38] (S3: tbl_df/tbl/data.frame)
+      tibble [330 x 39] (S3: tbl_df/tbl/data.frame)
        $ filename                  : chr [1:330] "1_2000_east_1_day_a-2023-12-14T105700.txt" "1_2000_ea"..
        $ DATAH                     : chr [1:330] "DATA" "DATA" "DATA" "DATA" ...
        $ Time                      : chr [1:330] "10:57:01" "10:57:02" "10:57:03" "10:57:04" ...
@@ -102,4 +102,5 @@
        $ CH4 Diagnostic Value      : num [1:330] 0 0 0 0 0 0 0 0 0 0 ...
        $ CHK                       : num [1:330] 10 163 64 252 4 17 96 47 82 44 ...
        $ datetime                  : POSIXct[1:330], format: "2023-12-14 10:57:01" "2023-12-14 10:57:02"..
+       $ comment                   : chr [1:330] NA NA NA NA ...
 

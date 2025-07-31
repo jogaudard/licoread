@@ -8,9 +8,7 @@ import7500(
   path,
   version = "till2023",
   plotinfo = TRUE,
-  plotinfo_names = c("location", "date", "time_of_day", "trial"),
-  comment = FALSE,
-  skip_new = 3
+  plotinfo_names = c("location", "date", "time_of_day", "trial")
 )
 }
 \arguments{
@@ -26,10 +24,6 @@ information about the measurement and that should be added in the output.}
 \item{plotinfo_names}{character vector of column names to use when seperating
 the plot info from the file name. Default is following the recommanded
 file naming convention \verb{[location]_[date]_[time of day]_[trial]}.}
-
-\item{comment}{do the raw files include a line with comments?}
-
-\item{skip_new}{nb of lines to skip with the updated version of the li7500}
 }
 \value{
 a dataframe with all data present in the files to import. New
