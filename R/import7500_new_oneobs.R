@@ -3,10 +3,10 @@
 #' @return a df with the content of the file
 #' @importFrom readr read_tsv read_lines locale
 #' @importFrom dplyr select mutate
-#' @importFrom stringr str_replace
-#' @importFrom lubridate parse_date_time round_date
+#' @importFrom stringr str_remove_all
+#' @importFrom lubridate round_date as_datetime
 
-import7500_old_oneobs <- function(filepath,
+import7500_new_oneobs <- function(filepath,
                                   comment,
                                   skip) {
 
@@ -19,17 +19,12 @@ import7500_old_oneobs <- function(filepath,
                    locale = locale(encoding = "latin1"),
                    id = "filename",
                    show_col_types = FALSE,
-                   name_repair = "unique_quiet") |>
-    select(!"...1")
-
-  datetime_txt <- read_lines(filepath, n_max = 1) |>
-    str_replace(" at ", " ") |>
-    parse_date_time(orders = "b d Y H:M:S")
-
+                   name_repair = "unique_quiet")
 
   oneobs_df <- data |>
     mutate(
-      datetime = datetime_txt + .data$`Relative Time`,
+      Time = str_remove_all(.data$Time, ":\\d{3}$"),
+      datetime = as_datetime(paste(.data$Date, .data$Time)),
       datetime = round_date(.data$datetime),
       filename = basename(.data$filename) # removing folder names
     )

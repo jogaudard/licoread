@@ -16,7 +16,8 @@ import7500 <- function(path,
                          "trial"
                        ),
                        comment = FALSE,
-                       skip = 8) {
+                       skip_old = 8,
+                       skip_new = 3) {
 
   list_files <- list.files(
     path,
@@ -28,12 +29,14 @@ import7500 <- function(path,
     output <- list_files |>
       map_dfr(import7500_old_oneobs,
               comment = comment,
-              skip = skip)
+              skip = skip_old)
   }
 
   if (version == "post2023") {
     output <- list_files |>
-      map_dfr(import7500_new_oneobs)
+      map_dfr(import7500_new_oneobs,
+              comment = comment,
+              skip = skip_new)
   }
 
   if (isTRUE(plotinfo)) {

@@ -29,3 +29,14 @@ test_that("works with pftc5 test files", {
       str(digits.d = 4, width = 100, strict.width = "cut")
   )
 })
+
+test_that("works with pftc7 test files", {
+  expect_snapshot(
+    import7500(
+      test_path("li7500/new/pftc7"),
+      version = "post2023",
+      plotinfo = FALSE
+    ) |>
+      str(digits.d = 4, width = 100, strict.width = "cut")
+  )
+})

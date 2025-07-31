@@ -70,4 +70,8 @@ datetime_txt |>
 debug(import7500_old_oneobs)
 import7500_old_oneobs(filename) |> View()
 
-
+import7500_new_oneobs(
+  "tests/testthat/li7500/new/pftc7/1_2000_east_1_day_a-2023-12-14T105700.txt",
+      comment = FALSE,
+      skip = 3
+  )

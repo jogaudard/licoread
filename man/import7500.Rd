@@ -10,7 +10,8 @@ import7500(
   plotinfo = TRUE,
   plotinfo_names = c("location", "date", "time_of_day", "trial"),
   comment = FALSE,
-  skip = 8
+  skip_old = 8,
+  skip_new = 3
 )
 }
 \description{
