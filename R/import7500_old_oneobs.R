@@ -44,7 +44,7 @@ import7500_old_oneobs <- function(filepath) {
                    progress = FALSE) |>
     select(!"...1")
 
-  datetime_txt <- read_lines(filepath, n_max = 1) |>
+  datetime_txt <- read_lines(filepath, n_max = 1, progress = FALSE) |>
     str_replace(" at ", " ") |>
     parse_date_time(orders = "b d Y H:M:S")
 
