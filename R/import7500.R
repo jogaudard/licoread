@@ -15,7 +15,6 @@
 #' the plot info from the file name. Default is following the recommanded
 #' file naming convention `[location]_[date]_[time of day]_[trial]`.
 #' @param comment do the raw files include a line with comments?
-#' @param skip_old nb of lines to skip with the old version of the li7500
 #' @param skip_new nb of lines to skip with the updated version of the li7500
 #' @return a dataframe with all data present in the files to import. New
 #' datetime and filename columns contain respectively the datetime of
@@ -50,7 +49,6 @@ import7500 <- function(path,
                          "trial"
                        ),
                        comment = FALSE,
-                       skip_old = 8,
                        skip_new = 3) {
 
   list_files <- list.files(
@@ -61,9 +59,7 @@ import7500 <- function(path,
 
   if (version == "till2023") {
     output <- list_files |>
-      map_dfr(import7500_old_oneobs,
-              comment = comment,
-              skip = skip_old)
+      map_dfr(import7500_old_oneobs)
   }
 
   if (version == "post2023") {

@@ -10,7 +10,6 @@ import7500(
   plotinfo = TRUE,
   plotinfo_names = c("location", "date", "time_of_day", "trial"),
   comment = FALSE,
-  skip_old = 8,
   skip_new = 3
 )
 }
@@ -29,8 +28,6 @@ the plot info from the file name. Default is following the recommanded
 file naming convention \verb{[location]_[date]_[time of day]_[trial]}.}
 
 \item{comment}{do the raw files include a line with comments?}
-
-\item{skip_old}{nb of lines to skip with the old version of the li7500}
 
 \item{skip_new}{nb of lines to skip with the updated version of the li7500}
 }
