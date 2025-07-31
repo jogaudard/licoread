@@ -54,7 +54,9 @@ import7500_old_oneobs <- function(filepath) {
       f_datetime = datetime_txt + .data$`Relative Time`,
       f_datetime = round_date(.data$f_datetime),
       f_fluxid = basename(.data$f_fluxid), # removing folder names
-      comment = comment_txt
+      comment = comment_txt,
+      f_start = min(.data$f_datetime),
+      f_end = max(.data$f_datetime)
     )
 
   oneobs_df
