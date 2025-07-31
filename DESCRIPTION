@@ -1,7 +1,7 @@
 Package: licoread
 Title: Reads Raw Files from Li-COR Gas Analyzers
-Version: 0.2.0
-Date: 2025-05-08
+Version: 0.3.0
+Date: 2025-07-31
 Authors@R: 
     person(given = "Joseph", family = "Gaudard", , "joseph.gaudard@pm.me", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-6989-7624"))
 Description: Reads raw files from Li-COR gas analyzers and produces a dataframe that can directly be used with 'fluxible' <https://cran.r-project.org/package=fluxible>.
@@ -25,6 +25,8 @@ Imports:
     tibble,
     tidyr,
     yaml
+Depends: 
+    R (>= 4.1)
 LazyData: true
 URL: https://jogaudard.github.io/licoread/
 BugReports: https://github.com/jogaudard/licoread/issues

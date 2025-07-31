@@ -53,3 +53,37 @@ ch4_dry <- licoread_to_fluxible(
   datetime_col = c("LI-8250_DATE", "LI-8250_TIME")
 )
 ```
+
+# Importing data from LI7500 tent setup
+
+The function `licoread::import7500` is tailored to import data files from the LI7500 tent setup described in @halbritterPlantTraitVegetation2024.
+Note that if the default values of `plotinfo_names` follows the file naming convention `[location]_[date]_[time of day]_[trial]`.
+The function is recursive and will read all the files in the designated folder and subfolders.
+It is therefore necessary that the designated folder contains only files to import and were all recorded with the same setup.
+
+The default settings import files from before the update of the LI7500.
+```{r li7500-co2fluxtent}
+# this step is not needed if you know where your data are
+path_co2fluxtent <- system.file("extdata/co2fluxtent", package = "licoread")
+data <- import7500(
+  path_co2fluxtent,
+  plotinfo_names = c("date", "location", "time_of_day", "trial")
+)
+```
+
+To read files created after the update of the LI7500, set `version = "post2023"`.
+```{r li7500-pftc7}
+# this step is not needed if you know where your data are
+path_pftc7 <- system.file("extdata/pftc7", package = "licoread")
+data <- import7500(path_pftc7, version = "post2023", plotinfo = FALSE)
+```
+
+In case a comment was written while creating the files (typically inserted on the line above the column names), set `comment = TRUE`.
+```{r li7500-pftc5}
+# this step is not needed if you know where your data are
+path_pftc5 <- system.file("extdata/pftc5", package = "licoread")
+data <- import7500(
+  path_pftc5, comment = TRUE,
+  plotinfo_names = c("site", "block", "date", "plot", "trial")
+)
+```

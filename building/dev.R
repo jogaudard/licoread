@@ -3,7 +3,7 @@ available::available("licoread")
 package_path = "/home/jga051/Documents/01_PhD/06_projects/licoread"
 usethis::create_package(path = package_path)
 
-usethis::use_test(name = "read_81x")
+usethis::use_test(name = "import7500")
 
 # build the documentation
 devtools::document()
