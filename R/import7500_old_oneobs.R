@@ -41,7 +41,7 @@ import7500_old_oneobs <- function(filepath,
       skip = (skip - 1)
     )
 
-    oneobs_df <- data |>
+    oneobs_df <- oneobs_df |>
       mutate(
         comment = comment_txt
       )

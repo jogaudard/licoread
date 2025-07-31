@@ -12,3 +12,20 @@ test_that("works with co2fluxtent test files", {
       str(digits.d = 4, width = 100, strict.width = "cut")
   )
 })
+
+test_that("works with pftc5 test files", {
+  expect_snapshot(
+    import7500(
+      test_path("li7500/old/pftc5"),
+      comment = TRUE,
+      plotinfo_names = c(
+        "site",
+        "block",
+        "date",
+        "plot",
+        "trial"
+      )
+    ) |>
+      str(digits.d = 4, width = 100, strict.width = "cut")
+  )
+})
