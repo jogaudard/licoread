@@ -20,7 +20,7 @@
 #' comment will contain the comments. Measurement informations from the file
 #' names are stored in new columns according to `plotinfo_names`.
 #' @export
-#' @importFrom purrr map_dfr
+#' @importFrom purrr map list_rbind
 #' @importFrom stringr str_remove
 #' @importFrom rlang .data
 #' @examples
@@ -55,12 +55,14 @@ import7500 <- function(path,
 
   if (version == "till2023") {
     output <- list_files |>
-      map_dfr(import7500_old_oneobs)
+      map(import7500_old_oneobs) |>
+      list_rbind()
   }
 
   if (version == "post2023") {
     output <- list_files |>
-      map_dfr(import7500_new_oneobs)
+      map(import7500_new_oneobs) |>
+      list_rbind()
   }
 
   if (isTRUE(plotinfo)) {
