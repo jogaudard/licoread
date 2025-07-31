@@ -41,7 +41,7 @@ path_pftc7 <- system.file("extdata/pftc7", package = "licoread")
 import7500(path_pftc7, version = "post2023", plotinfo = FALSE)
 
 path_pftc5 <- system.file("extdata/pftc5", package = "licoread")
-import7500(path_pftc5, comment = TRUE,
+import7500(path_pftc5,
 plotinfo_names = c("site", "block", "date", "plot", "trial"))
 
 path_co2fluxtent <- system.file("extdata/co2fluxtent",
