@@ -50,3 +50,18 @@ gas_df_82z <- licoread(test_path("lead_zero_prob"), file_type = "82z")
 gas_df_82z <- licoread("tests/testthat/test82z", file_type = "82z", sample = 5)
 
 list_gases(gas_df_81x) |> View()
+
+import7500("inst/extdata/li7500/old")
+
+read_lines()
+
+filename <- "inst/extdata/li7500/old/ACJ_B_15mar2018_plot1_a.txt"
+
+read_tsv("inst/extdata/li7500/old/ACJ_B_15mar2018_plot1_a.txt",
+skip = 9, n_max = 1, col_names = FALSE) |> as.character()
+
+datetime_txt <- read_lines(filename, n_max = 1)
+
+datetime_txt |>
+    stringr::str_replace(" at ", " ") |>
+    lubridate::parse_date_time(orders = "b d Y H:M:S")
