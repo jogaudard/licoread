@@ -65,3 +65,6 @@ datetime_txt <- read_lines(filename, n_max = 1)
 datetime_txt |>
     stringr::str_replace(" at ", " ") |>
     lubridate::parse_date_time(orders = "b d Y H:M:S")
+
+debug(import7500_old_oneobs)
+import7500_old_oneobs(filename) |> View()
