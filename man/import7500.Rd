@@ -14,6 +14,53 @@ import7500(
   skip_new = 3
 )
 }
+\arguments{
+\item{path}{location of the files. Note that the function is recursive and
+will import all the files at the location}
+
+\item{version}{\code{"till2023"} (default) refers to the setup before the li7500
+update. For the update version, use \code{"post2023"}.}
+
+\item{plotinfo}{\code{TRUE} (default), means that the file name contains
+information about the measurement and that should be added in the output.}
+
+\item{plotinfo_names}{character vector of column names to use when seperating
+the plot info from the file name. Default is following the recommanded
+file naming convention \verb{[location]_[date]_[time of day]_[trial]}.}
+
+\item{comment}{do the raw files include a line with comments?}
+
+\item{skip_old}{nb of lines to skip with the old version of the li7500}
+
+\item{skip_new}{nb of lines to skip with the updated version of the li7500}
+}
+\value{
+a dataframe with all data present in the files to import. New
+datetime and filename columns contain respectively the datetime of
+measurements and their orginial filename. If \code{comment = TRUE}, a column
+comment will contain the comments. Measurement informations from the file
+names are stored in new columns according to \code{plotinfo_names}.
+}
 \description{
-imports data from li7500 setup
+imports data from the li7500 setup described in
+Halbritter et al (2024)
+}
+\examples{
+path_pftc7 <- system.file("extdata/li7500/pftc7", package = "licoread")
+import7500(path_pftc7, version = "post2023", plotinfo = FALSE)
+
+path_pftc5 <- system.file("extdata/li7500/pftc5", package = "licoread")
+import7500(path_pftc5, comment = TRUE,
+plotinfo_names = c("site", "block", "date", "plot", "trial"))
+
+path_co2fluxtent <- system.file("extdata/li7500/co2fluxtent",
+package = "licoread")
+import7500(path_co2fluxtent,
+plotinfo_names = c("date", "location", "time_of_day", "trial"))
+}
+\references{
+Halbritter, A.H., Vandvik, V., Cotner, S.H. et al.
+Plant trait and vegetation data along a 1314 m elevation gradient with fire
+history in Puna grasslands, Perú. Sci Data 11, 225 (2024).
+https://doi.org/10.1038/s41597-024-02980-3
 }

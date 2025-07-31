@@ -8,6 +8,10 @@ import7500_old_oneobs(filepath, comment, skip)
 }
 \arguments{
 \item{filepath}{path to the file}
+
+\item{comment}{do the raw files include a line with comments?}
+
+\item{skip}{nb of line to skip when reading the file}
 }
 \value{
 a df with the content of the file

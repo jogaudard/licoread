@@ -1,10 +1,13 @@
 #' imports one file from li7500 (old)
 #' @param filepath path to the file
+#' @param comment do the raw files include a line with comments?
+#' @param skip nb of line to skip when reading the file
 #' @return a df with the content of the file
 #' @importFrom readr read_tsv read_lines locale
 #' @importFrom dplyr select mutate
 #' @importFrom stringr str_replace
 #' @importFrom lubridate parse_date_time round_date
+#' @importFrom rlang .data
 
 import7500_old_oneobs <- function(filepath,
                                   comment,

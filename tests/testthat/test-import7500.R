@@ -1,7 +1,7 @@
 test_that("works with co2fluxtent test files", {
   expect_snapshot(
     import7500(
-      test_path("li7500/old/co2fluxtent"),
+      test_path("co2fluxtent/"),
       plotinfo_names = c(
         "date",
         "location",
@@ -16,7 +16,7 @@ test_that("works with co2fluxtent test files", {
 test_that("works with pftc5 test files", {
   expect_snapshot(
     import7500(
-      test_path("li7500/old/pftc5"),
+      test_path("pftc5/"),
       comment = TRUE,
       plotinfo_names = c(
         "site",
@@ -33,7 +33,7 @@ test_that("works with pftc5 test files", {
 test_that("works with pftc7 test files", {
   expect_snapshot(
     import7500(
-      test_path("li7500/new/pftc7"),
+      test_path("pftc7/"),
       version = "post2023",
       plotinfo = FALSE
     ) |>

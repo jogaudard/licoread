@@ -1,9 +1,8 @@
 # works with co2fluxtent test files
 
     Code
-      str(import7500(test_path("li7500/old/co2fluxtent"), plotinfo_names = c("date",
-        "location", "time_of_day", "trial")), digits.d = 4, width = 100,
-      strict.width = "cut")
+      str(import7500(test_path("co2fluxtent/"), plotinfo_names = c("date", "location",
+        "time_of_day", "trial")), digits.d = 4, width = 100, strict.width = "cut")
     Output
       tibble [345 x 20] (S3: tbl_df/tbl/data.frame)
        $ filename       : chr [1:345] "06172020_almont_night_1a.txt" "06172020_almont_night_1a.txt" "06"..
@@ -30,9 +29,8 @@
 # works with pftc5 test files
 
     Code
-      str(import7500(test_path("li7500/old/pftc5"), comment = TRUE, plotinfo_names = c(
-        "site", "block", "date", "plot", "trial")), digits.d = 4, width = 100,
-      strict.width = "cut")
+      str(import7500(test_path("pftc5/"), comment = TRUE, plotinfo_names = c("site",
+        "block", "date", "plot", "trial")), digits.d = 4, width = 100, strict.width = "cut")
     Output
       tibble [251 x 22] (S3: tbl_df/tbl/data.frame)
        $ filename       : chr [1:251] "ACJ_B_15mar2018_plot1_a.txt" "ACJ_B_15mar2018_plot1_a.txt" "ACJ_"..
@@ -61,7 +59,7 @@
 # works with pftc7 test files
 
     Code
-      str(import7500(test_path("li7500/new/pftc7"), version = "post2023", plotinfo = FALSE),
+      str(import7500(test_path("pftc7/"), version = "post2023", plotinfo = FALSE),
       digits.d = 4, width = 100, strict.width = "cut")
     Output
       tibble [330 x 38] (S3: tbl_df/tbl/data.frame)
