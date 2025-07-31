@@ -40,7 +40,8 @@ import7500_old_oneobs <- function(filepath) {
                    locale = locale(encoding = "latin1"),
                    id = "filename",
                    show_col_types = FALSE,
-                   name_repair = "unique_quiet") |>
+                   name_repair = "unique_quiet",
+                   progress = FALSE) |>
     select(!"...1")
 
   datetime_txt <- read_lines(filepath, n_max = 1) |>

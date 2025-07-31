@@ -40,7 +40,8 @@ import7500_new_oneobs <- function(filepath) {
                    locale = locale(encoding = "latin1"),
                    id = "filename",
                    show_col_types = FALSE,
-                   name_repair = "unique_quiet")
+                   name_repair = "unique_quiet",
+                   progress = FALSE)
 
   oneobs_df <- data |>
     mutate(
