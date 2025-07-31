@@ -25,6 +25,8 @@ Imports:
     tibble,
     tidyr,
     yaml
+Depends: 
+    R (>= 4.1)
 LazyData: true
 URL: https://jogaudard.github.io/licoread/
 BugReports: https://github.com/jogaudard/licoread/issues
