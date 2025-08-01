@@ -68,7 +68,7 @@ import7500 <- function(path,
   if (isTRUE(plotinfo)) {
     output <- output |>
       mutate(
-        filename_temp = str_remove(.data$f_fluxid, "\\.[^.]+$")
+        filename_temp = str_remove(.data$filename, "\\.[^.]+$")
       ) |>
       separate_wider_delim(
         "filename_temp",

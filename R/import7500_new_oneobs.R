@@ -38,7 +38,7 @@ import7500_new_oneobs <- function(filepath) {
   data <- read_tsv(filepath,
                    skip = header_line_index - 1,
                    locale = locale(encoding = "latin1"),
-                   id = "f_fluxid",
+                   id = "filename",
                    show_col_types = FALSE,
                    name_repair = "unique_quiet",
                    progress = FALSE)
@@ -48,10 +48,10 @@ import7500_new_oneobs <- function(filepath) {
       Time = str_remove_all(.data$Time, ":\\d{3}$"),
       f_datetime = as_datetime(paste(.data$Date, .data$Time)),
       f_datetime = round_date(.data$f_datetime),
-      f_fluxid = basename(.data$f_fluxid), # removing folder names
+      filename = basename(.data$filename), # removing folder names
       comment = comment_txt,
-      f_start = min(.data$f_datetime),
-      f_end = max(.data$f_datetime),
+      file_start = min(.data$f_datetime),
+      file_end = max(.data$f_datetime),
       pressure_atm = 0.009869233 * .data$`Pressure (kPa)`
     )
 
