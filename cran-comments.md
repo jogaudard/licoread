@@ -1,9 +1,6 @@
 ## R CMD check results
 
-Duration: 1m 24s
+Duration: 1m 49.2s
 
-0 errors | 0 warnings | 1 note
+0 errors | 0 warnings | 0 note
 
-* This is a new release.
-* "Possibly misspelled words in DESCRIPTION:
-    licoread (7:18)", but this is the name of the package.

@@ -51,10 +51,13 @@ import7500_old_oneobs <- function(filepath) {
 
   oneobs_df <- data |>
     mutate(
-      datetime = datetime_txt + .data$`Relative Time`,
-      datetime = round_date(.data$datetime),
+      f_datetime = datetime_txt + .data$`Relative Time`,
+      f_datetime = round_date(.data$f_datetime),
       filename = basename(.data$filename), # removing folder names
-      comment = comment_txt
+      comment = comment_txt,
+      file_start = min(.data$f_datetime),
+      file_end = max(.data$f_datetime),
+      pressure_atm = 0.009869233 * .data$`Pressure`
     )
 
   oneobs_df
