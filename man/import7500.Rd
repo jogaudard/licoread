@@ -15,7 +15,7 @@ update. For the update version, use \code{"post2023"}.}
 
 \item{plotinfo}{character vector of names to use when seperating the
 plot info from the file name. Names in the file name have to be separated
-with an underscore, for example: \verb{[location]_[date]_[time of day]_[trial]}.
+with an underscore, ex: \verb{[location]_[date]_[time of day]_[trial].txt}.
 \code{FALSE} (default) means no information will be fetched from the filename.}
 }
 \value{
@@ -34,13 +34,13 @@ path_pftc7 <- system.file("extdata/pftc7", package = "licoread")
 import7500(path_pftc7, version = "post2023")
 
 path_pftc5 <- system.file("extdata/pftc5", package = "licoread")
-import7500(path_pftc5, plotinfo = TRUE,
-plotinfo_names = c("site", "treatment", "date", "plot", "trial"))
+import7500(path_pftc5,
+plotinfo = c("site", "treatment", "date", "plot", "trial"))
 
 path_co2fluxtent <- system.file("extdata/co2fluxtent",
 package = "licoread")
-import7500(path_co2fluxtent, plotinfo = TRUE,
-plotinfo_names = c("date", "location", "time_of_day", "trial"))
+import7500(path_co2fluxtent,
+plotinfo = c("date", "location", "time_of_day", "trial"))
 }
 \references{
 Halbritter, A.H., Vandvik, V., Cotner, S.H. et al.
