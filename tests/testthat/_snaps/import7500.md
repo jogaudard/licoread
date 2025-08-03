@@ -1,7 +1,7 @@
 # works with co2fluxtent test files
 
     Code
-      str(import7500(test_path("co2fluxtent/"), plotinfo_names = c("date", "location",
+      str(import7500(test_path("co2fluxtent/"), plotinfo = c("date", "location",
         "time_of_day", "trial")), digits.d = 4, width = 100, strict.width = "cut")
     Output
       tibble [345 x 24] (S3: tbl_df/tbl/data.frame)
@@ -33,7 +33,7 @@
 # works with pftc5 test files
 
     Code
-      str(import7500(test_path("pftc5/"), plotinfo_names = c("site", "block", "date",
+      str(import7500(test_path("pftc5/"), plotinfo = c("site", "block", "date",
         "plot", "trial")), digits.d = 4, width = 100, strict.width = "cut")
     Output
       tibble [287 x 25] (S3: tbl_df/tbl/data.frame)
