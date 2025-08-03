@@ -2,7 +2,7 @@ test_that("works with co2fluxtent test files", {
   expect_snapshot(
     import7500(
       test_path("co2fluxtent/"),
-      plotinfo_names = c(
+      plotinfo = c(
         "date",
         "location",
         "time_of_day",
@@ -17,7 +17,7 @@ test_that("works with pftc5 test files", {
   expect_snapshot(
     import7500(
       test_path("pftc5/"),
-      plotinfo_names = c(
+      plotinfo = c(
         "site",
         "block",
         "date",

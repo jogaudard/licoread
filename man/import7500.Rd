@@ -4,12 +4,7 @@
 \alias{import7500}
 \title{imports data from li7500 setup}
 \usage{
-import7500(
-  path,
-  version = "till2023",
-  plotinfo = TRUE,
-  plotinfo_names = c("location", "date", "time_of_day", "trial")
-)
+import7500(path, version = "till2023", plotinfo = FALSE)
 }
 \arguments{
 \item{path}{location of the files. Note that the function is recursive and
@@ -18,12 +13,10 @@ will import all the files at the location}
 \item{version}{\code{"till2023"} (default) refers to the setup before the li7500
 update. For the update version, use \code{"post2023"}.}
 
-\item{plotinfo}{\code{TRUE} (default), means that the file name contains
-information about the measurement and that should be added in the output.}
-
-\item{plotinfo_names}{character vector of column names to use when seperating
-the plot info from the file name. Default is following the recommanded
-file naming convention \verb{[location]_[date]_[time of day]_[trial]}.}
+\item{plotinfo}{character vector of names to use when seperating the
+plot info from the file name. Names in the file name have to be separated
+with an underscore, ex: \verb{[location]_[date]_[time of day]_[trial].txt}.
+\code{FALSE} (default) means no information will be fetched from the filename.}
 }
 \value{
 a dataframe with all data present in the files to import. New
@@ -38,16 +31,16 @@ Halbritter et al (2024)
 }
 \examples{
 path_pftc7 <- system.file("extdata/pftc7", package = "licoread")
-import7500(path_pftc7, version = "post2023", plotinfo = FALSE)
+import7500(path_pftc7, version = "post2023")
 
 path_pftc5 <- system.file("extdata/pftc5", package = "licoread")
 import7500(path_pftc5,
-plotinfo_names = c("site", "block", "date", "plot", "trial"))
+plotinfo = c("site", "treatment", "date", "plot", "trial"))
 
 path_co2fluxtent <- system.file("extdata/co2fluxtent",
 package = "licoread")
 import7500(path_co2fluxtent,
-plotinfo_names = c("date", "location", "time_of_day", "trial"))
+plotinfo = c("date", "location", "time_of_day", "trial"))
 }
 \references{
 Halbritter, A.H., Vandvik, V., Cotner, S.H. et al.
