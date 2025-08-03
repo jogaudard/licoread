@@ -20,9 +20,9 @@ with an underscore, ex: \verb{[location]_[date]_[time of day]_[trial].txt}.
 }
 \value{
 a dataframe with all data present in the files to import. New
-datetime and filename columns contain respectively the datetime of
+datetime and fluxid columns contain respectively the datetime of
 measurements and their orginial filename. If \code{comment = TRUE}, a column
-comment will contain the comments. Measurement informations from the file
+will contain the comments. Measurement informations from the file
 names are stored in new columns according to \code{plotinfo_names}.
 }
 \description{
