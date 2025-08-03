@@ -14,9 +14,9 @@
 #' with an underscore, ex: `[location]_[date]_[time of day]_[trial].txt`.
 #' `FALSE` (default) means no information will be fetched from the filename.
 #' @return a dataframe with all data present in the files to import. New
-#' datetime and filename columns contain respectively the datetime of
+#' datetime and fluxid columns contain respectively the datetime of
 #' measurements and their orginial filename. If `comment = TRUE`, a column
-#' comment will contain the comments. Measurement informations from the file
+#' will contain the comments. Measurement informations from the file
 #' names are stored in new columns according to `plotinfo_names`.
 #' @export
 #' @importFrom purrr map list_rbind
@@ -61,7 +61,7 @@ import7500 <- function(path,
   if (!isFALSE(plotinfo)) {
     output <- output |>
       mutate(
-        filename_temp = str_remove(.data$filename, "\\.[^.]+$")
+        filename_temp = str_remove(.data$f_fluxid, "\\.[^.]+$")
       ) |>
       separate_wider_delim(
         "filename_temp",
