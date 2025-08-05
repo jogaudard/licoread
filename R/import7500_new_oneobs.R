@@ -43,6 +43,7 @@ import7500_new_oneobs <- function(filepath) {
                    name_repair = "unique_quiet",
                    progress = FALSE)
 
+
   oneobs_df <- data |>
     mutate(
       Time = str_remove_all(.data$Time, ":\\d{3}$"),
@@ -52,6 +53,7 @@ import7500_new_oneobs <- function(filepath) {
       comment = comment_txt,
       f_start = min(.data$f_datetime),
       f_end = max(.data$f_datetime),
+      `Pressure (kPa)` = suppressWarnings(as.numeric(.data$`Pressure (kPa)`)),
       pressure_atm = 0.009869233 * .data$`Pressure (kPa)`
     )
 
