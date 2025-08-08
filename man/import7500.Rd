@@ -21,9 +21,9 @@ with an underscore, ex: \verb{[location]_[date]_[time of day]_[trial].txt}.
 \value{
 a dataframe with all data present in the files to import. New
 datetime and fluxid columns contain respectively the datetime of
-measurements and their orginial filename. If \code{comment = TRUE}, a column
+measurements and their orginial filename. If comments are present, a column
 will contain the comments. Measurement informations from the file
-names are stored in new columns according to \code{plotinfo_names}.
+names are stored in new columns according to \code{plotinfo}.
 }
 \description{
 imports data from the li7500 setup described in
@@ -44,7 +44,7 @@ plotinfo = c("date", "location", "time_of_day", "trial"))
 }
 \references{
 Halbritter, A.H., Vandvik, V., Cotner, S.H. et al.
-Plant trait and vegetation data along a 1314 m elevation gradient with fire
+Plant trait and vegetation data along a 1314 m elevation gradient with fire
 history in Puna grasslands, Perú. Sci Data 11, 225 (2024).
 https://doi.org/10.1038/s41597-024-02980-3
 }

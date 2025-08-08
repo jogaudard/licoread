@@ -2,7 +2,7 @@
 #' @description imports data from the li7500 setup described in
 #' Halbritter et al (2024)
 #' @references Halbritter, A.H., Vandvik, V., Cotner, S.H. et al.
-#' Plant trait and vegetation data along a 1314 m elevation gradient with fire
+#' Plant trait and vegetation data along a 1314 m elevation gradient with fire
 #' history in Puna grasslands, Perú. Sci Data 11, 225 (2024).
 #' https://doi.org/10.1038/s41597-024-02980-3
 #' @param path location of the files. Note that the function is recursive and
@@ -15,9 +15,9 @@
 #' `FALSE` (default) means no information will be fetched from the filename.
 #' @return a dataframe with all data present in the files to import. New
 #' datetime and fluxid columns contain respectively the datetime of
-#' measurements and their orginial filename. If `comment = TRUE`, a column
+#' measurements and their orginial filename. If comments are present, a column
 #' will contain the comments. Measurement informations from the file
-#' names are stored in new columns according to `plotinfo_names`.
+#' names are stored in new columns according to `plotinfo`.
 #' @export
 #' @importFrom purrr map list_rbind
 #' @importFrom stringr str_remove
