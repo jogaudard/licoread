@@ -13,7 +13,7 @@ will import all the files at the location}
 \item{version}{\code{"till2023"} (default) refers to the setup before the li7500
 update. For the update version, use \code{"post2023"}.}
 
-\item{plotinfo}{character vector of names to use when seperating the
+\item{plotinfo}{character vector of names to use when separating the
 plot info from the file name. Names in the file name have to be separated
 with an underscore, ex: \verb{[location]_[date]_[time of day]_[trial].txt}.
 \code{FALSE} (default) means no information will be fetched from the filename.}
@@ -21,7 +21,7 @@ with an underscore, ex: \verb{[location]_[date]_[time of day]_[trial].txt}.
 \value{
 a dataframe with all data present in the files to import. New
 datetime and fluxid columns contain respectively the datetime of
-measurements and their orginial filename. If comments are present, a column
+measurements and their original filename. If comments are present, a column
 will contain the comments. Measurement informations from the file
 names are stored in new columns according to \code{plotinfo}.
 }
