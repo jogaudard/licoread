@@ -9,6 +9,7 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/licoread)](https://CRAN.R-project.org/package=licoread)
 [![LifeCycle](https://img.shields.io/badge/lifecycle-experimental-orange)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![cranlogs](https://cranlogs.r-pkg.org/badges/licoread)](https://cran.r-project.org/package=licoread)
 <!-- badges: end -->
 
 The licoread R package provides an easy way to import raw files from
